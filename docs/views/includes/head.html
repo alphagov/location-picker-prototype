@@ -1,0 +1,6 @@
+<link href="/public/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/public/stylesheets/docs.css" media="screen" rel="stylesheet" type="text/css" />
+
+{% if promoMode == 'true' and analyticsId %}
+	{% include "includes/analytics.html" %}
+{% endif %}
