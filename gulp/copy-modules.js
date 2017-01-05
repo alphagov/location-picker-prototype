@@ -27,3 +27,8 @@ gulp.task('copy-elements-sass', function () {
   return gulp.src(['node_modules/govuk-elements-sass/public/sass/**'])
   .pipe(gulp.dest(config.paths.govukModules + '/govuk-elements-sass/'))
 })
+
+gulp.task('copy-typeahead', function () {
+  return gulp.src(['node_modules/corejs-typeahead/dist/**'])
+  .pipe(gulp.dest(config.paths.govukModules + '/corejs-typeahead/'))
+})
