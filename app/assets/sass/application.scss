@@ -28,3 +28,49 @@ $path: "/public/images/";
 }
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+.typeahead,
+.tt-query,
+.tt-hint {
+  font-size: 19px;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  border: 1px solid #bbb;
+  margin: 0;
+  padding: 0.5em;
+}
+
+.tt-hint{
+  display: none;
+}
+
+.tt-menu {
+  padding: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.tt-suggestion {
+  padding: 0.5em;
+  font-size: 19px;
+  line-height: 24px;
+}
+
+.tt-suggestion p{
+  margin: 0;
+}
+
+.tt-suggestion.tt-cursor {
+  color: #fff;
+  background-color: #0097cf;
+}
+
+.twitter-typeahead {
+  width: 100%;
+
+  .validation-wrapper .optional-section & input {
+    margin-bottom: 0;
+  }
+}
