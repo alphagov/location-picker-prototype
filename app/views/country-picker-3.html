@@ -14,13 +14,30 @@
     </h1>
 
     <!-- Country picker -->
-     <div class="form-group">
+    <div class="form-group">
       <label class="form-label-bold" for="country-select-box">Country</label>
       <input type="text" class="form-control" id="country-select-box" placeholder="Country">
     </div>
 
     <div class="form-group">
       <input type="submit" class="button" value="Continue">
+    </div>
+
+    <h2 class="heading-large">Debugging options</h2>
+
+    <div class="form-group">
+      <label class="form-label" for="country-select-locale">Preferred locale (will present options in this locale, where translation is available)</label>
+      <select class="form-control" id="country-select-locale">
+        <option value="en-GB" selected>English</option>
+        <option value="cy">Welsh</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label class="block-label selection-button-checkbox" for="country-show-paths">
+        <input id="country-show-paths" name="show-paths" type="checkbox" value="show-paths" checked>
+        Show paths (useful for debugging, will cause duplicate countries to appear where more than one path exists)
+      </label>
     </div>
 
   </form>
@@ -44,6 +61,7 @@
   <script type="text/javascript">
     $(document).ready(function () {
       var preferredLocale = 'en-GB'
+      var showPaths = true
 
       $.get('/public/data/dummy-picker-data-1.json', (graph) => {
         // This is a map that takes a name and returns its node and locale.
@@ -122,7 +140,7 @@
             canonicalNodesWithPaths.map(cnwp => {
               var canonicalName = presentableName(cnwp.node, preferredLocale)
               var pathToName = ''
-              if (cnwp.path.length) {
+              if (showPaths && cnwp.path.length) {
                 var stableNamesInPath = cnwp.path.map(pathNode => presentableName(pathNode.node, pathNode.locale))
                 pathToName = ` (path: ${stableNamesInPath.join(' > ')})`
               }
@@ -151,6 +169,14 @@
               syncResults(presentableResults)
             })
           }
+        })
+
+        $('#country-select-locale').on('change', (evt) => {
+          preferredLocale = evt.target.value
+        })
+
+        $('#country-show-paths').on('change', (evt) => {
+          showPaths = evt.target.checked
         })
       })
     })
