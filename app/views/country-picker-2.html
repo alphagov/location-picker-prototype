@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Example - Forms
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <form action="/docs/tutorials-and-examples" method="post" class="form">
+
+    <h1 class="form-title heading-large">
+      Country picker
+    </h1>
+
+    <!-- Country picker -->
+     <div class="form-group">
+      <label class="form-label-bold" for="country-select-box">Country</label>
+      <input type="text" class="form-control" id="country-select-box" placeholder="Country">
+    </div>
+
+    <div class="form-group">
+      <input type="submit" class="button" value="Continue">
+    </div>
+
+  </form>
+
+</main>
+{% endblock %}
+
+{% block body_end %}
+  <!-- Javascript -->
+  <script src="/public/javascripts/details.polyfill.js"></script>
+  <script src="/public/javascripts/jquery-1.11.3.js"></script>
+  <script src="/public/javascripts/govuk/selection-buttons.js"></script>
+  <script src="/public/javascripts/govuk/shim-links-with-button-role.js"></script>
+  <script src="/public/javascripts/govuk/show-hide-content.js"></script>
+  <script src="/public/javascripts/application.js"></script>
+  <!-- GOV.UK Prototype kit {{releaseVersion}} -->
+
+  <script src="/public/typeahead.bundle.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $.get('https://country.register.gov.uk/records.json?page-size=500', function (result) {
+        var countries = Object.keys(result).map(k => result[k])
+        var countryNames = countries.map(c => c.name)
+
+        var states = new Bloodhound({
+          datumTokenizer: Bloodhound.tokenizers.whitespace,
+          queryTokenizer: Bloodhound.tokenizers.whitespace,
+          local: countryNames
+        })
+
+        $('#country-select-box').typeahead({
+          hint: false
+        }, {
+          source: states
+        })
+      })
+    })
+  </script>
+{% endblock %}
