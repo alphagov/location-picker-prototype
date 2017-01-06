@@ -69,7 +69,7 @@
         }
       }
 
-      loadJSON('https://country.register.gov.uk/records.json', function (data) {
+      loadJSON('https://country.register.gov.uk/records.json?page-size=500', function (data) {
         var countries = Object.keys(data).map(function (k) {
           return data[k]
         })
