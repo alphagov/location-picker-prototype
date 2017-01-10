@@ -1,0 +1,328 @@
+{
+    "country:gb": {
+        "names": {
+            "en-GB": "United Kingdom",
+            "cy": "Deyrnas Unedig"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "synonym:gb:gb": {
+        "names": {
+            "en-GB": "gb"
+        },
+        "meta": {
+            "canonical": false,
+            "canonical-mask": 0,
+            "stable-name": false
+        },
+        "edges": {
+            "from": ["country:gb"]
+        }
+    },
+    "synonym:gb:uk": {
+        "names": {
+            "en-GB": "uk"
+        },
+        "meta": {
+            "canonical": false,
+            "canonical-mask": 0,
+            "stable-name": false
+        },
+        "edges": {
+            "from": ["country:gb"]
+        }
+    },
+    "uk:nir": {
+        "names": {
+            "en-GB": "Northern Ireland",
+            "cy": "Gogledd Iwerddon"
+        },
+        "meta": {
+            "canonical": false,
+            "canonical-mask": 0,
+            "stable-name": true
+        },
+        "edges": {
+            "from": ["country:gb"]
+        }
+    },
+    "synonym:nir:nir": {
+        "names": {
+            "en-GB": "nir"
+        },
+        "meta": {
+            "canonical": false,
+            "canonical-mask": 0,
+            "stable-name": false
+        },
+        "edges": {
+            "from": ["uk:nir"]
+        }
+    },
+    "uk:wls": {
+        "names": {
+            "en-GB": "Wales",
+            "cy": "Cymru"
+        },
+        "meta": {
+            "canonical": false,
+            "canonical-mask": 0,
+            "stable-name": true
+        },
+        "edges": {
+            "from": ["country:gb"]
+        }
+    },
+    "synonym:wls:wls": {
+        "names": {
+            "en-GB": "wls"
+        },
+        "meta": {
+            "canonical": false,
+            "canonical-mask": 0,
+            "stable-name": false
+        },
+        "edges": {
+            "from": ["uk:wls"]
+        }
+    },
+    "uk:sct": {
+        "names": {
+            "en-GB": "Scotland",
+            "cy": "Yr Alban"
+        },
+        "meta": {
+            "canonical": false,
+            "canonical-mask": 0,
+            "stable-name": true
+        },
+        "edges": {
+            "from": ["country:gb"]
+        }
+    },
+    "synonym:sct:sct": {
+        "names": {
+            "en-GB": "sct"
+        },
+        "meta": {
+            "canonical": false,
+            "canonical-mask": 0,
+            "stable-name": false
+        },
+        "edges": {
+            "from": ["uk:sct"]
+        }
+    },
+    "uk:eng": {
+        "names": {
+            "en-GB": "England",
+            "cy": "Lloegr"
+        },
+        "meta": {
+            "canonical": false,
+            "canonical-mask": 0,
+            "stable-name": true
+        },
+        "edges": {
+            "from": ["country:gb"]
+        }
+    },
+    "synonym:eng:eng": {
+        "names": {
+            "en-GB": "eng"
+        },
+        "meta": {
+            "canonical": false,
+            "canonical-mask": 0,
+            "stable-name": false
+        },
+        "edges": {
+            "from": ["uk:eng"]
+        }
+    },
+    "uk:gbn": {
+        "names": {
+            "en-GB": "Great Britain",
+            "cy": "Prydain Fawr"
+        },
+        "meta": {
+            "canonical": false,
+            "canonical-mask": 0,
+            "stable-name": true
+        },
+        "edges": {
+            "from": ["country:gb"]
+        }
+    },
+    "synonym:gbn:gbn": {
+        "names": {
+            "en-GB": "gbn"
+        },
+        "meta": {
+            "canonical": false,
+            "canonical-mask": 0,
+            "stable-name": false
+        },
+        "edges": {
+            "from": ["uk:gbn"]
+        }
+    },
+    "territory:im": {
+        "names": {
+            "en-GB": "Isle of Man",
+            "cy": "Ynys Manaw"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "territory:hk": {
+        "names": {
+            "en-GB": "Hong Kong",
+            "cy": "Hong Kong"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "territory:sx": {
+        "names": {
+            "en-GB": "Sint Maarten (Dutch part)",
+            "cy": "Sint Maarten (rhan Iseldireg)"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "synonym:sx:sx": {
+        "names": {
+            "en-GB": "Sint Maarten"
+        },
+        "meta": {
+            "canonical": false,
+            "canonical-mask": 0,
+            "stable-name": false
+        },
+        "edges": {
+            "from": ["territory:sx"]
+        }
+    },
+    "territory:bq-se": {
+        "names": {
+            "en-GB": "Sint Eustatius",
+            "cy": "Sint Eustatius"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "territory:bat": {
+        "names": {
+            "en-GB": "British Antarctic Territory",
+            "cy": "Tiriogaeth Antarctig Prydain"
+        },
+        "meta": {
+            "canonical": false,
+            "canonical-mask": 0,
+            "stable-name": true
+        },
+        "edges": {
+            "from": ["country:gb"]
+        }
+    },
+    "territory:bat": {
+        "names": {
+            "en-GB": "British Antarctic Territory",
+            "cy": "Tiriogaeth Antarctig Prydain"
+        },
+        "meta": {
+            "canonical": false,
+            "canonical-mask": 0,
+            "stable-name": true
+        },
+        "edges": {
+            "from": ["country:gb"]
+        }
+    },
+    "territory:aq": {
+        "names": {
+            "en-GB": "Antarctica",
+            "cy": "Antarctica"
+        },
+        "meta": {
+            "canonical": false,
+            "canonical-mask": 0,
+            "stable-name": true
+        },
+        "edges": {
+            "from": ["country:gb", "country:fr"]
+        }
+    },
+    "country:fr": {
+        "names": {
+            "en-GB": "France",
+            "cy": "France"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "synonym:fr:fr": {
+        "names": {
+            "en-GB": "The French Republic"
+        },
+        "meta": {
+            "canonical": false,
+            "canonical-mask": 0,
+            "stable-name": false
+        },
+        "edges": {
+            "from": ["country:fr"]
+        }
+    },
+    "endonym:fr": {
+        "names": {
+            "fr-FR": "République Française"
+        },
+        "meta": {
+            "canonical": false,
+            "canonical-mask": 0,
+            "stable-name": false
+        },
+        "edges": {
+            "from": ["country:fr"]
+        }
+    }
+}
