@@ -149,8 +149,10 @@
 
   <script src="/public/typeahead.bundle.min.js"></script>
   <script src="https://unpkg.com/lodash@4.17.4" type="text/javascript"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
 
-  <script type="text/javascript">
+  <script type="text/babel">
     $(document).ready(function () {
       var preferredLocale = 'en-GB'
       var showPaths = false
@@ -164,7 +166,7 @@
 
       function presentableName (node, locale) {
         var requestedName = node['names'][locale]
-        var fallback = Object.values(node['names'])[0]
+        var fallback = Object.keys(node['names']).map(k => node['names'][k])[0]
         return requestedName || fallback
       }
 
