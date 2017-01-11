@@ -10,9 +10,7 @@ function presentableName (node, locale) {
   return requestedName || fallback
 }
 
-var preferredLocale = 'en-GB'
-
-var locationReverseMap = Object.keys(locationGraph)
+var locationReverseMap = (preferredLocale) => Object.keys(locationGraph)
   .reduce((revMap, curie) => {
     var node = locationGraph[curie]
     Object.keys(node.names).forEach(locale => {
@@ -28,7 +26,7 @@ var locationReverseMap = Object.keys(locationGraph)
     return revMap
   }, {})
 
-var canonicalLocationList = Object.keys(locationGraph)
+var canonicalLocationList = (preferredLocale) => Object.keys(locationGraph)
   .reduce((list, curie) => {
     var node = locationGraph[curie]
     return isCanonicalNode(node)

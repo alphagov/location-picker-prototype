@@ -9,18 +9,26 @@ router.get('/', function (req, res) {
 
 // add your routes here
 router.get('/country-picker-4', function (req, res) {
+  var locale = 'en-GB'
+
   res.render('country-picker-4', {
+    html_lang: 'en',
     graph: locationService.locationGraph,
-    locations: locationService.canonicalLocationList,
-    reverseMap: locationService.locationReverseMap,
-    locale: 'en-GB'
+    locations: locationService.canonicalLocationList(locale),
+    reverseMap: locationService.locationReverseMap(locale),
+    locale: locale
   })
 })
 
 router.get('/country-picker-4.cy', function (req, res) {
+  var locale = 'cy'
+
   res.render('country-picker-4', {
-    locations: locationService.canonicalLocationList,
-    locale: 'cy'
+    html_lang: locale,
+    graph: locationService.locationGraph,
+    locations: locationService.canonicalLocationList(locale),
+    reverseMap: locationService.locationReverseMap(locale),
+    locale: locale
   })
 })
 
