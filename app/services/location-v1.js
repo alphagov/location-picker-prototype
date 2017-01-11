@@ -1,0 +1,44 @@
+var locationGraph = require('../assets/data/dummy-picker-data-1.json')
+
+function isCanonicalNode (node) {
+  return node.meta.canonical
+}
+
+function presentableName (node, locale) {
+  var requestedName = node['names'][locale]
+  var fallback = Object.values(node['names'])[0]
+  return requestedName || fallback
+}
+
+var preferredLocale = 'en-GB'
+
+var locationReverseMap = Object.keys(locationGraph)
+  .reduce((revMap, curie) => {
+    var node = locationGraph[curie]
+    Object.keys(node.names).forEach(locale => {
+      var name = node.names[locale]
+      // HACK to prevent overriding for example Antarctica,
+      // where the en-GB and cy names are identical, and we want
+      // en-GB to stay on top.
+      var isntDefinedOrLocaleIsEnGb = !revMap[name] || locale === preferredLocale
+      if (isntDefinedOrLocaleIsEnGb) {
+        revMap[name] = { node, locale }
+      }
+    })
+    return revMap
+  }, {})
+
+var canonicalLocationList = Object.keys(locationGraph)
+  .reduce((list, curie) => {
+    var node = locationGraph[curie]
+    return isCanonicalNode(node)
+      ? list.concat([presentableName(node, preferredLocale)])
+      : list
+  }, [])
+  .sort()
+
+module.exports = {
+  canonicalLocationList: canonicalLocationList,
+  locationGraph: locationGraph,
+  locationReverseMap: locationReverseMap
+}
