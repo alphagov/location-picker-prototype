@@ -15,8 +15,8 @@
 
     <!-- Location picker -->
     <div class="form-group">
-      <label class="form-label-bold" for="location-select-box">Location</label>
-      <select class="form-control" id="location-select-box">
+      <label class="form-label-bold" for="location-select-dropdown">Location</label>
+      <select class="form-control" id="location-select-dropdown">
         <option value="" disabled selected>Select a location</option>
         {% for location in locations %}
           <option value="{{location}}">{{location}}</option>
@@ -26,6 +26,15 @@
 
     <div class="form-group">
       <input type="submit" class="button" value="Continue">
+    </div>
+
+    <h2 class="heading-large">Debugging options</h2>
+
+    <div class="form-group">
+      <label class="block-label selection-button-checkbox" for="location-show-paths">
+        <input id="location-show-paths" name="show-paths" type="checkbox" value="show-paths" checked>
+        Show paths (useful for debugging, will cause duplicate countries to appear where more than one path exists)
+      </label>
     </div>
 
   </form>
@@ -45,4 +54,120 @@
 
   <script src="/public/typeahead.bundle.min.js"></script>
   <script src="https://unpkg.com/lodash@4.17.4" type="text/javascript"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      var preferredLocale = 'en-GB'
+      var showPaths = true
+      var preferredLocale = {{ locale | dump | safe }}
+      var graph = {{ graph | dump | safe }}
+      var reverseMap = {{ reverseMap | dump | safe }}
+
+      function isCanonicalNode (node) {
+        return node.meta.canonical
+      }
+
+      function presentableName (node, locale) {
+        var requestedName = node['names'][locale]
+        var fallback = Object.values(node['names'])[0]
+        return requestedName || fallback
+      }
+
+      // Given a starting node and the locale with which it was reached, this is a
+      // recursive function that will search the graph to find the canonical node(s).
+      function findCanonicalNodeWithPath (node, locale, path) {
+        if (locale === preferredLocale) {
+          if (isCanonicalNode(node)) {
+            // We found it.
+            return [{ node, locale: preferredLocale, path }]
+          } else {
+            // Get all the linked nodes.
+            var linkedNodes = node.edges.from.map(nodeFromCurie => graph[nodeFromCurie])
+            // Find the canonical nodes for each one of them.
+            return linkedNodes.reduce((canonicalNodes, linkedNode) =>{
+              return canonicalNodes.concat(findCanonicalNodeWithPath(
+                linkedNode,
+                preferredLocale,
+                path.concat([{ node, locale: preferredLocale }])
+              ))
+            }, [])
+          }
+        } else {
+          // If not the preferredLocale, add a hop to the path while we switch
+          // to the preferredLocale.
+          return findCanonicalNodeWithPath(
+            node,
+            preferredLocale,
+            path.concat([{ node, locale }])
+          )
+        }
+      }
+
+      // Bloodhound gives us back a list of results that includes synonyms, typos,
+      // endonyms and other things we don't want the user to see.
+      // This function transforms those into a list of stable canonical country names.
+      function presentResults (rawResults) {
+        var nodesWithLocales = rawResults.map(r => reverseMap[r])
+
+        var canonicalNodesWithPaths = nodesWithLocales.reduce((canonicalNodes, nwl) => {
+          return canonicalNodes.concat(findCanonicalNodeWithPath(nwl.node, nwl.locale, []))
+        }, [])
+
+        var presentableNodes = _.uniq(
+          canonicalNodesWithPaths.map(cnwp => {
+            var canonicalName = presentableName(cnwp.node, preferredLocale)
+            var pathToName = ''
+            if (showPaths && cnwp.path.length) {
+              var stableNamesInPath = cnwp.path.map(pathNode => presentableName(pathNode.node, pathNode.locale))
+              pathToName = ` (path: ${stableNamesInPath.join(' > ')})`
+            }
+            return `${canonicalName}${pathToName}`
+          })
+        )
+
+        return presentableNodes
+      }
+
+      // The keys of the reverseMap represent all the names/synonyms/endonyms, so
+      // we use them as the seed data for Bloodhound.
+      var seed = Object.keys(reverseMap)
+      var countries = new Bloodhound({
+        datumTokenizer: Bloodhound.tokenizers.nonword,
+        queryTokenizer: Bloodhound.tokenizers.whitespace,
+        local: seed
+      })
+
+      // Find the existing select and enhance it to the typeahead.
+      var select = $('#location-select-dropdown')
+      var input = $('<input type="text" />')
+      select.after(input).hide()
+
+      input.attr({
+        autocomplete: 'off',
+        autocorrect: 'off',
+        class: 'form-control',
+        id: 'location-select-box',
+        type: 'text',
+        value: ''
+      })
+
+      var label = $('[for="location-select-dropdown"]')
+      label.attr('for', 'location-select-box')
+
+      input.typeahead({
+        hint: false
+      }, {
+        source: (query, syncResults) => {
+          countries.search(query, (rawResults) => {
+            var presentableResults = presentResults(rawResults)
+            syncResults(presentableResults)
+          })
+        }
+      })
+
+      $('#location-show-paths').on('change', (evt) => {
+        showPaths = evt.target.checked
+      })
+    })
+  </script>
 {% endblock %}
