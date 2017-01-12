@@ -76,21 +76,20 @@
 
   <form action="/docs/tutorials-and-examples" method="post" class="form">
 
-    <h1 class="form-title heading-large">
-      {% if locale === 'en-GB' %}
-        Location picker
-      {% else %}
-        Dewisydd lleoliad
-      {% endif %}
-    </h1>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
 
     <!-- Location picker -->
     <div class="form-group">
       <label class="form-label-bold" for="location-select-dropdown">
         {% if locale === 'en-GB' %}
-          Location
+          Type in the country on your passport
         {% else %}
-          Lleoliad
+          Teipiwch yn y wlad ar eich pasbort
         {% endif %}
       </label>
       <select class="form-control" id="location-select-dropdown">
@@ -115,23 +114,33 @@
       {% endif %}
     </div>
 
-    <h2 class="heading-large">Debugging options</h2>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
 
     <p>
       {% if locale === 'en-GB' %}
-        <a href="/country-picker-4.cy" lang="cy" hreflang="cy">Fersiwn Cymraeg o'r dudalen hon</a>
+      <a href="/country-picker-4.cy" lang="cy" hreflang="cy">Fersiwn Cymraeg o'r dudalen hon</a>
       {% else %}
-        <a href="/country-picker-4" lang="en" hreflang="en">English version of this page</a>
+      <a href="/country-picker-4" lang="en" hreflang="en">English version of this page</a>
       {% endif %}
     </p>
 
-    <div class="form-group">
-      <label class="block-label selection-button-checkbox" for="location-show-paths">
-        <input id="location-show-paths" name="show-paths" type="checkbox" value="show-paths">
-        Show paths (useful for debugging, will cause duplicate countries to appear where more than one path exists)
-      </label>
-    </div>
-
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
   </form>
 
 </main>
@@ -155,7 +164,7 @@
   <script type="text/babel">
     $(document).ready(function () {
       var preferredLocale = 'en-GB'
-      var showPaths = false
+      var showPaths = true
       var preferredLocale = {{ locale | dump | safe }}
       var graph = {{ graph | dump | safe }}
       var reverseMap = {{ reverseMap | dump | safe }}
@@ -215,8 +224,13 @@
             var canonicalName = presentableName(cnwp.node, preferredLocale)
             var pathToName = ''
             if (showPaths && cnwp.path.length) {
-              var stableNamesInPath = cnwp.path.map(pathNode => presentableName(pathNode.node, pathNode.locale))
-              pathToName = ` (path: ${stableNamesInPath.join(' > ')})`
+              var stableNamesInPath = cnwp.path
+                .filter(pathNode => pathNode.node.meta['stable-name'])
+                .map(pathNode => presentableName(pathNode.node, pathNode.locale))
+              var lastNode = stableNamesInPath.pop()
+              if (lastNode) {
+                pathToName = ` (${lastNode})`
+              }
             }
             return `${canonicalName}${pathToName}`
           })
@@ -254,6 +268,7 @@
       input.typeahead({
         hint: false
       }, {
+        limit: 2000,
         source: (query, syncResults) => {
           countries.search(query, (rawResults) => {
             var presentableResults = presentResults(rawResults)

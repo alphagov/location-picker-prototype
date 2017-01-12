@@ -8,10 +8,10 @@ router.get('/', function (req, res) {
 })
 
 // add your routes here
-router.get('/country-picker-4', function (req, res) {
+router.get('/demo-picker', function (req, res) {
   var locale = 'en-GB'
 
-  res.render('country-picker-4', {
+  res.render('demo-picker', {
     html_lang: 'en',
     graph: locationService.locationGraph,
     locations: locationService.canonicalLocationList(locale),
@@ -20,10 +20,10 @@ router.get('/country-picker-4', function (req, res) {
   })
 })
 
-router.get('/country-picker-4.cy', function (req, res) {
+router.get('/demo-picker.cy', function (req, res) {
   var locale = 'cy'
 
-  res.render('country-picker-4', {
+  res.render('demo-picker', {
     html_lang: locale,
     graph: locationService.locationGraph,
     locations: locationService.canonicalLocationList(locale),
