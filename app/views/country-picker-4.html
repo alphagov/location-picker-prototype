@@ -153,13 +153,16 @@
   <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
   <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
 
+  <script type="text/javascript">
+    var preferredLocale = {{ locale | dump | safe }}
+    var graph = {{ graph | dump | safe }}
+    var reverseMap = {{ reverseMap | dump | safe }}
+  </script>
+
   <script type="text/babel">
     $(document).ready(function () {
       var preferredLocale = 'en-GB'
       var showPaths = false
-      var preferredLocale = {{ locale | dump | safe }}
-      var graph = {{ graph | dump | safe }}
-      var reverseMap = {{ reverseMap | dump | safe }}
 
       function isCanonicalNode (node) {
         return node.meta.canonical

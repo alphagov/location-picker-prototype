@@ -1,4 +1,4 @@
-var locationGraph = require('../assets/data/dummy-picker-data-1.json')
+var locationGraph = require('../assets/data/dummy-picker-data-2.json')
 
 function isCanonicalNode (node) {
   return node.meta.canonical
