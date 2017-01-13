@@ -1,11 +1,59 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  Example - Forms
+  Country Picker Example 3
 {% endblock %}
 
 {% block content %}
 <main id="content" role="main">
+
+  <style>
+    .typeahead,
+    .tt-query,
+    .tt-hint {
+      font-size: 19px;
+      line-height: 1.25;
+      font-weight: 300;
+      text-transform: none;
+      border: 1px solid #bbb;
+      margin: 0;
+      padding: 0.5em;
+    }
+
+    .tt-hint {
+      display: none;
+    }
+
+    .tt-menu {
+      padding: 0;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      width: 100%;
+    }
+
+    .tt-suggestion {
+      padding: 0.5em;
+      font-size: 19px;
+      line-height: 24px;
+    }
+
+    .tt-suggestion p {
+      margin: 0;
+    }
+
+    .tt-suggestion.tt-cursor {
+      color: #fff;
+      background-color: #0097cf;
+    }
+
+    .twitter-typeahead {
+      width: 100%;
+    }
+
+    .validation-wrapper .optional-section .twitter-typeahead input {
+      margin-bottom: 0;
+    }
+  </style>
 
   <form action="/docs/tutorials-and-examples" method="post" class="form">
 
