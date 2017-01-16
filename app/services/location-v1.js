@@ -6,7 +6,7 @@ function isCanonicalNode (node) {
 
 function presentableName (node, locale) {
   var requestedName = node['names'][locale]
-  var fallback = Object.values(node['names'])[0]
+  var fallback = Object.keys(node['names']).map(k => node['names'][k])[0]
   return requestedName || fallback
 }
 
