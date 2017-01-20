@@ -32,4 +32,28 @@ router.get('/country-picker-4.cy', function (req, res) {
   })
 })
 
+router.get('/location-picker-5', function (req, res) {
+  var locale = 'en-GB'
+
+  res.render('location-picker-5', {
+    html_lang: 'en',
+    graph: locationService.locationGraph,
+    locations: locationService.canonicalLocationList(locale),
+    reverseMap: locationService.locationReverseMap(locale),
+    locale: locale
+  })
+})
+
+router.get('/location-picker-5.cy', function (req, res) {
+  var locale = 'cy'
+
+  res.render('location-picker-5', {
+    html_lang: locale,
+    graph: locationService.locationGraph,
+    locations: locationService.canonicalLocationList(locale),
+    reverseMap: locationService.locationReverseMap(locale),
+    locale: locale
+  })
+})
+
 module.exports = router
