@@ -1,0 +1,6 @@
+---
+applications:
+- name: openregister-picker-prototypes
+  command: node ./node_modules/gulp/bin/gulp generate-assets && node server.js
+  memory: 256M
+  buildpack: nodejs_buildpack
