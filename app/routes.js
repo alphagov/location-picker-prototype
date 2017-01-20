@@ -1,5 +1,6 @@
 var express = require('express')
-var locationService = require('./services/location-v1')
+var locationServiceV1 = require('./services/location-v1')
+var locationServiceV2 = require('./services/location-v2')
 var router = express.Router()
 
 // Route index page
@@ -13,9 +14,9 @@ router.get('/country-picker-4', function (req, res) {
 
   res.render('country-picker-4', {
     html_lang: 'en',
-    graph: locationService.locationGraph,
-    locations: locationService.canonicalLocationList(locale),
-    reverseMap: locationService.locationReverseMap(locale),
+    graph: locationServiceV1.locationGraph,
+    locations: locationServiceV1.canonicalLocationList(locale),
+    reverseMap: locationServiceV1.locationReverseMap(locale),
     locale: locale
   })
 })
@@ -25,9 +26,9 @@ router.get('/country-picker-4.cy', function (req, res) {
 
   res.render('country-picker-4', {
     html_lang: locale,
-    graph: locationService.locationGraph,
-    locations: locationService.canonicalLocationList(locale),
-    reverseMap: locationService.locationReverseMap(locale),
+    graph: locationServiceV1.locationGraph,
+    locations: locationServiceV1.canonicalLocationList(locale),
+    reverseMap: locationServiceV1.locationReverseMap(locale),
     locale: locale
   })
 })
@@ -37,9 +38,9 @@ router.get('/location-picker-5', function (req, res) {
 
   res.render('location-picker-5', {
     html_lang: 'en',
-    graph: locationService.locationGraph,
-    locations: locationService.canonicalLocationList(locale),
-    reverseMap: locationService.locationReverseMap(locale),
+    graph: locationServiceV2.locationGraph,
+    locations: locationServiceV2.canonicalLocationList(locale),
+    reverseMap: locationServiceV2.locationReverseMap(locale),
     locale: locale
   })
 })
@@ -49,9 +50,9 @@ router.get('/location-picker-5.cy', function (req, res) {
 
   res.render('location-picker-5', {
     html_lang: locale,
-    graph: locationService.locationGraph,
-    locations: locationService.canonicalLocationList(locale),
-    reverseMap: locationService.locationReverseMap(locale),
+    graph: locationServiceV2.locationGraph,
+    locations: locationServiceV2.canonicalLocationList(locale),
+    reverseMap: locationServiceV2.locationReverseMap(locale),
     locale: locale
   })
 })
