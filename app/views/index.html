@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  GOV.UK prototype kit
+  Location Picker Prototypes
 {% endblock %}
 
 {% block content %}
@@ -11,10 +11,13 @@
     <div class="column-two-thirds">
 
       <h1 class="heading-xlarge">
-        Country Picker Prototypes
+        Location Picker Prototypes
       </h1>
 
-      <p>These are country picker widgets that read data from the <a href="https://country.register.gov.uk/" target="_blank">country register</a>.</p>
+      <p>
+        These are location picker widgets that read data from the <a href="https://country.register.gov.uk/" target="_blank">country register</a>
+        and the <a href="https://territory.register.gov.uk/" target="_blank">territory register</a>.
+      </p>
 
       <h2 class="heading-medium"><a href="/country-picker-1">Example 1: Plain JavaScript + plain register</a></h2>
 
@@ -41,7 +44,7 @@
         territory relationships.
       </p>
 
-      <h2 class="heading-medium"><a href="/country-picker-4">Example 4: jQuery Typeahead + fixes + full register data</a></h2>
+      <h2 class="heading-medium"><a href="/country-picker-4">Example 4: jQuery Typeahead + fixes + full register data v1</a></h2>
 
       <p>
         This example builds upon the previous one by adding progressive
@@ -52,6 +55,15 @@
         >DWP's implementation</a>. It also moves part of the initial data processing logic
         server-side, has separate pages for English and Welsh, is compatible with more
         browsers, has some minor usability fixes, and uses a much larger dataset.
+      </p>
+
+      <h2 class="heading-medium"><a href="/location-picker-5">Example 5: Custom Typeahead + full register data v2</a></h2>
+
+      <p>
+        This example uses a version of a <a href="https://github.com/alphagov/accessible-typeahead" target="_blank">custom built typeahead that focuses on accessibility</a>.
+        The styling is almost completely recycled from example 4. The
+        data is an enhanced version of the data from example 4, with additional
+        territories and synonyms.
       </p>
 
     </div>
