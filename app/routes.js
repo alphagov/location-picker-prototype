@@ -1,6 +1,7 @@
 var express = require('express')
 var locationServiceV1 = require('./services/location-v1')
 var locationServiceV2 = require('./services/location-v2')
+var demoLocationService = require('./services/demo-location-v1')
 var router = express.Router()
 
 // Route index page
@@ -53,6 +54,30 @@ router.get('/location-picker-5.cy', function (req, res) {
     graph: locationServiceV2.locationGraph,
     locations: locationServiceV2.canonicalLocationList(locale),
     reverseMap: locationServiceV2.locationReverseMap(locale),
+    locale: locale
+  })
+})
+
+router.get('/demo-picker', function (req, res) {
+  var locale = 'en-GB'
+
+  res.render('demo-picker', {
+    html_lang: 'en',
+    graph: demoLocationService.locationGraph,
+    locations: demoLocationService.canonicalLocationList(locale),
+    reverseMap: demoLocationService.locationReverseMap(locale),
+    locale: locale
+  })
+})
+
+router.get('/demo-picker.cy', function (req, res) {
+  var locale = 'cy'
+
+  res.render('demo-picker', {
+    html_lang: locale,
+    graph: demoLocationService.locationGraph,
+    locations: demoLocationService.canonicalLocationList(locale),
+    reverseMap: demoLocationService.locationReverseMap(locale),
     locale: locale
   })
 })
