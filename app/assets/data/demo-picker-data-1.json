@@ -1,0 +1,2889 @@
+{
+    "country:pt": {
+        "names": {
+            "en-GB": "Portugal"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:pw": {
+        "names": {
+            "en-GB": "Palau"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:py": {
+        "names": {
+            "en-GB": "Paraguay"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:qa": {
+        "names": {
+            "en-GB": "Qatar"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:ad": {
+        "names": {
+            "en-GB": "Andorra"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:ae": {
+        "names": {
+            "en-GB": "United Arab Emirates"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:af": {
+        "names": {
+            "en-GB": "Afghanistan"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:ag": {
+        "names": {
+            "en-GB": "Antigua and Barbuda"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:al": {
+        "names": {
+            "en-GB": "Albania"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:am": {
+        "names": {
+            "en-GB": "Armenia"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:ao": {
+        "names": {
+            "en-GB": "Angola"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:ar": {
+        "names": {
+            "en-GB": "Argentina"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:at": {
+        "names": {
+            "en-GB": "Austria"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:au": {
+        "names": {
+            "en-GB": "Australia"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:az": {
+        "names": {
+            "en-GB": "Azerbaijan"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:ro": {
+        "names": {
+            "en-GB": "Romania"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:ba": {
+        "names": {
+            "en-GB": "Bosnia and Herzegovina"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:bb": {
+        "names": {
+            "en-GB": "Barbados"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:rs": {
+        "names": {
+            "en-GB": "Serbia"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:bd": {
+        "names": {
+            "en-GB": "Bangladesh"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:be": {
+        "names": {
+            "en-GB": "Belgium"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:ru": {
+        "names": {
+            "en-GB": "Russia"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:bf": {
+        "names": {
+            "en-GB": "Burkina Faso"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:bg": {
+        "names": {
+            "en-GB": "Bulgaria"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:rw": {
+        "names": {
+            "en-GB": "Rwanda"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:bh": {
+        "names": {
+            "en-GB": "Bahrain"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:bi": {
+        "names": {
+            "en-GB": "Burundi"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:bj": {
+        "names": {
+            "en-GB": "Benin"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:bn": {
+        "names": {
+            "en-GB": "Brunei"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:bo": {
+        "names": {
+            "en-GB": "Bolivia"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:sa": {
+        "names": {
+            "en-GB": "Saudi Arabia"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:sb": {
+        "names": {
+            "en-GB": "Solomon Islands"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:br": {
+        "names": {
+            "en-GB": "Brazil"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:sc": {
+        "names": {
+            "en-GB": "Seychelles"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:sd": {
+        "names": {
+            "en-GB": "Sudan"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:bs": {
+        "names": {
+            "en-GB": "The Bahamas"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:bt": {
+        "names": {
+            "en-GB": "Bhutan"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:se": {
+        "names": {
+            "en-GB": "Sweden"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:sg": {
+        "names": {
+            "en-GB": "Singapore"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:bw": {
+        "names": {
+            "en-GB": "Botswana"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:si": {
+        "names": {
+            "en-GB": "Slovenia"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:by": {
+        "names": {
+            "en-GB": "Belarus"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:bz": {
+        "names": {
+            "en-GB": "Belize"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:sk": {
+        "names": {
+            "en-GB": "Slovakia"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:sl": {
+        "names": {
+            "en-GB": "Sierra Leone"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:sm": {
+        "names": {
+            "en-GB": "San Marino"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:sn": {
+        "names": {
+            "en-GB": "Senegal"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:so": {
+        "names": {
+            "en-GB": "Somalia"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:ca": {
+        "names": {
+            "en-GB": "Canada"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:sr": {
+        "names": {
+            "en-GB": "Suriname"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:ss": {
+        "names": {
+            "en-GB": "South Sudan"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:cd": {
+        "names": {
+            "en-GB": "Congo (Democratic Republic)"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:st": {
+        "names": {
+            "en-GB": "Sao Tome and Principe"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:su": {
+        "names": {
+            "en-GB": "USSR"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:cf": {
+        "names": {
+            "en-GB": "Central African Republic"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:sv": {
+        "names": {
+            "en-GB": "El Salvador"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:cg": {
+        "names": {
+            "en-GB": "Congo"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:ch": {
+        "names": {
+            "en-GB": "Switzerland"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:ci": {
+        "names": {
+            "en-GB": "Ivory Coast"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:sy": {
+        "names": {
+            "en-GB": "Syria"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:sz": {
+        "names": {
+            "en-GB": "Swaziland"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:cl": {
+        "names": {
+            "en-GB": "Chile"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:cm": {
+        "names": {
+            "en-GB": "Cameroon"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:cn": {
+        "names": {
+            "en-GB": "China"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:co": {
+        "names": {
+            "en-GB": "Colombia"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:cr": {
+        "names": {
+            "en-GB": "Costa Rica"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:cs": {
+        "names": {
+            "en-GB": "Czechoslovakia"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:td": {
+        "names": {
+            "en-GB": "Chad"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:cu": {
+        "names": {
+            "en-GB": "Cuba"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:cv": {
+        "names": {
+            "en-GB": "Cape Verde"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:tg": {
+        "names": {
+            "en-GB": "Togo"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:th": {
+        "names": {
+            "en-GB": "Thailand"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:cy": {
+        "names": {
+            "en-GB": "Cyprus"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:tj": {
+        "names": {
+            "en-GB": "Tajikistan"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:cz": {
+        "names": {
+            "en-GB": "Czechia"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:tl": {
+        "names": {
+            "en-GB": "East Timor"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:tm": {
+        "names": {
+            "en-GB": "Turkmenistan"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:tn": {
+        "names": {
+            "en-GB": "Tunisia"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:to": {
+        "names": {
+            "en-GB": "Tonga"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:tr": {
+        "names": {
+            "en-GB": "Turkey"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:dd": {
+        "names": {
+            "en-GB": "East Germany"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:tt": {
+        "names": {
+            "en-GB": "Trinidad and Tobago"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:de": {
+        "names": {
+            "en-GB": "Germany"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:tv": {
+        "names": {
+            "en-GB": "Tuvalu"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:dj": {
+        "names": {
+            "en-GB": "Djibouti"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:tz": {
+        "names": {
+            "en-GB": "Tanzania"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:dk": {
+        "names": {
+            "en-GB": "Denmark"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:dm": {
+        "names": {
+            "en-GB": "Dominica"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:do": {
+        "names": {
+            "en-GB": "Dominican Republic"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:ua": {
+        "names": {
+            "en-GB": "Ukraine"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:ug": {
+        "names": {
+            "en-GB": "Uganda"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:dz": {
+        "names": {
+            "en-GB": "Algeria"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:ec": {
+        "names": {
+            "en-GB": "Ecuador"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:us": {
+        "names": {
+            "en-GB": "United States"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:ee": {
+        "names": {
+            "en-GB": "Estonia"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:eg": {
+        "names": {
+            "en-GB": "Egypt"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:uy": {
+        "names": {
+            "en-GB": "Uruguay"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:uz": {
+        "names": {
+            "en-GB": "Uzbekistan"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:va": {
+        "names": {
+            "en-GB": "Vatican City"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:er": {
+        "names": {
+            "en-GB": "Eritrea"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:vc": {
+        "names": {
+            "en-GB": "St Vincent"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:es": {
+        "names": {
+            "en-GB": "Spain"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:et": {
+        "names": {
+            "en-GB": "Ethiopia"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:ve": {
+        "names": {
+            "en-GB": "Venezuela"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:vn": {
+        "names": {
+            "en-GB": "Vietnam"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:vu": {
+        "names": {
+            "en-GB": "Vanuatu"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:fi": {
+        "names": {
+            "en-GB": "Finland"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:fj": {
+        "names": {
+            "en-GB": "Fiji"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:fm": {
+        "names": {
+            "en-GB": "Micronesia"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:ga": {
+        "names": {
+            "en-GB": "Gabon"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:ws": {
+        "names": {
+            "en-GB": "Samoa"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:gd": {
+        "names": {
+            "en-GB": "Grenada"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:ge": {
+        "names": {
+            "en-GB": "Georgia"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:gh": {
+        "names": {
+            "en-GB": "Ghana"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:gm": {
+        "names": {
+            "en-GB": "The Gambia"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:gn": {
+        "names": {
+            "en-GB": "Guinea"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:gq": {
+        "names": {
+            "en-GB": "Equatorial Guinea"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:gr": {
+        "names": {
+            "en-GB": "Greece"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:gt": {
+        "names": {
+            "en-GB": "Guatemala"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:gw": {
+        "names": {
+            "en-GB": "Guinea-Bissau"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:gy": {
+        "names": {
+            "en-GB": "Guyana"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:xk": {
+        "names": {
+            "en-GB": "Kosovo"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:hn": {
+        "names": {
+            "en-GB": "Honduras"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:hr": {
+        "names": {
+            "en-GB": "Croatia"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:ht": {
+        "names": {
+            "en-GB": "Haiti"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:ye": {
+        "names": {
+            "en-GB": "Yemen"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:hu": {
+        "names": {
+            "en-GB": "Hungary"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:id": {
+        "names": {
+            "en-GB": "Indonesia"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:yu": {
+        "names": {
+            "en-GB": "Yugoslavia"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:ie": {
+        "names": {
+            "en-GB": "Ireland"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:il": {
+        "names": {
+            "en-GB": "Israel"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:in": {
+        "names": {
+            "en-GB": "India"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:za": {
+        "names": {
+            "en-GB": "South Africa"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:iq": {
+        "names": {
+            "en-GB": "Iraq"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:ir": {
+        "names": {
+            "en-GB": "Iran"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:is": {
+        "names": {
+            "en-GB": "Iceland"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:it": {
+        "names": {
+            "en-GB": "Italy"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:zm": {
+        "names": {
+            "en-GB": "Zambia"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:zw": {
+        "names": {
+            "en-GB": "Zimbabwe"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:jm": {
+        "names": {
+            "en-GB": "Jamaica"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:jo": {
+        "names": {
+            "en-GB": "Jordan"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:jp": {
+        "names": {
+            "en-GB": "Japan"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:ke": {
+        "names": {
+            "en-GB": "Kenya"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:kg": {
+        "names": {
+            "en-GB": "Kyrgyzstan"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:kh": {
+        "names": {
+            "en-GB": "Cambodia"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:ki": {
+        "names": {
+            "en-GB": "Kiribati"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:km": {
+        "names": {
+            "en-GB": "Comoros"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:kn": {
+        "names": {
+            "en-GB": "St Kitts and Nevis"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:kp": {
+        "names": {
+            "en-GB": "North Korea"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:kr": {
+        "names": {
+            "en-GB": "South Korea"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:kw": {
+        "names": {
+            "en-GB": "Kuwait"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:kz": {
+        "names": {
+            "en-GB": "Kazakhstan"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:la": {
+        "names": {
+            "en-GB": "Laos"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:lb": {
+        "names": {
+            "en-GB": "Lebanon"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:lc": {
+        "names": {
+            "en-GB": "St Lucia"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:li": {
+        "names": {
+            "en-GB": "Liechtenstein"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:lk": {
+        "names": {
+            "en-GB": "Sri Lanka"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:lr": {
+        "names": {
+            "en-GB": "Liberia"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:ls": {
+        "names": {
+            "en-GB": "Lesotho"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:lt": {
+        "names": {
+            "en-GB": "Lithuania"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:lu": {
+        "names": {
+            "en-GB": "Luxembourg"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:lv": {
+        "names": {
+            "en-GB": "Latvia"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:ly": {
+        "names": {
+            "en-GB": "Libya"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:ma": {
+        "names": {
+            "en-GB": "Morocco"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:mc": {
+        "names": {
+            "en-GB": "Monaco"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:md": {
+        "names": {
+            "en-GB": "Moldova"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:me": {
+        "names": {
+            "en-GB": "Montenegro"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:mg": {
+        "names": {
+            "en-GB": "Madagascar"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:mh": {
+        "names": {
+            "en-GB": "Marshall Islands"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:mk": {
+        "names": {
+            "en-GB": "Macedonia"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:ml": {
+        "names": {
+            "en-GB": "Mali"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:mm": {
+        "names": {
+            "en-GB": "Burma"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:mn": {
+        "names": {
+            "en-GB": "Mongolia"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:mr": {
+        "names": {
+            "en-GB": "Mauritania"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:mt": {
+        "names": {
+            "en-GB": "Malta"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:mu": {
+        "names": {
+            "en-GB": "Mauritius"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:mv": {
+        "names": {
+            "en-GB": "Maldives"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:mw": {
+        "names": {
+            "en-GB": "Malawi"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:mx": {
+        "names": {
+            "en-GB": "Mexico"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:my": {
+        "names": {
+            "en-GB": "Malaysia"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:mz": {
+        "names": {
+            "en-GB": "Mozambique"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:na": {
+        "names": {
+            "en-GB": "Namibia"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:ne": {
+        "names": {
+            "en-GB": "Niger"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:ng": {
+        "names": {
+            "en-GB": "Nigeria"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:ni": {
+        "names": {
+            "en-GB": "Nicaragua"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:nl": {
+        "names": {
+            "en-GB": "Netherlands"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:no": {
+        "names": {
+            "en-GB": "Norway"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:np": {
+        "names": {
+            "en-GB": "Nepal"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:nr": {
+        "names": {
+            "en-GB": "Nauru"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:nz": {
+        "names": {
+            "en-GB": "New Zealand"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:om": {
+        "names": {
+            "en-GB": "Oman"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:pa": {
+        "names": {
+            "en-GB": "Panama"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:pe": {
+        "names": {
+            "en-GB": "Peru"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:pg": {
+        "names": {
+            "en-GB": "Papua New Guinea"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:ph": {
+        "names": {
+            "en-GB": "Philippines"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:pk": {
+        "names": {
+            "en-GB": "Pakistan"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:pl": {
+        "names": {
+            "en-GB": "Poland"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "country:gb": {
+        "names": {
+            "en-GB": "United Kingdom",
+            "cy": "Deyrnas Unedig"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "synonym:gb:gb": {
+        "names": {
+            "en-GB": "gb"
+        },
+        "meta": {
+            "canonical": false,
+            "canonical-mask": 0,
+            "stable-name": false
+        },
+        "edges": {
+            "from": ["country:gb"]
+        }
+    },
+    "synonym:gb:uk": {
+        "names": {
+            "en-GB": "uk"
+        },
+        "meta": {
+            "canonical": false,
+            "canonical-mask": 0,
+            "stable-name": false
+        },
+        "edges": {
+            "from": ["country:gb"]
+        }
+    },
+    "uk:nir": {
+        "names": {
+            "en-GB": "Northern Ireland",
+            "cy": "Gogledd Iwerddon"
+        },
+        "meta": {
+            "canonical": false,
+            "canonical-mask": 0,
+            "stable-name": true
+        },
+        "edges": {
+            "from": ["country:gb"]
+        }
+    },
+    "synonym:nir:nir": {
+        "names": {
+            "en-GB": "nir"
+        },
+        "meta": {
+            "canonical": false,
+            "canonical-mask": 0,
+            "stable-name": false
+        },
+        "edges": {
+            "from": ["uk:nir"]
+        }
+    },
+    "uk:wls": {
+        "names": {
+            "en-GB": "Wales",
+            "cy": "Cymru"
+        },
+        "meta": {
+            "canonical": false,
+            "canonical-mask": 0,
+            "stable-name": true
+        },
+        "edges": {
+            "from": ["country:gb"]
+        }
+    },
+    "synonym:wls:wls": {
+        "names": {
+            "en-GB": "wls"
+        },
+        "meta": {
+            "canonical": false,
+            "canonical-mask": 0,
+            "stable-name": false
+        },
+        "edges": {
+            "from": ["uk:wls"]
+        }
+    },
+    "uk:sct": {
+        "names": {
+            "en-GB": "Scotland",
+            "cy": "Yr Alban"
+        },
+        "meta": {
+            "canonical": false,
+            "canonical-mask": 0,
+            "stable-name": true
+        },
+        "edges": {
+            "from": ["country:gb"]
+        }
+    },
+    "synonym:sct:sct": {
+        "names": {
+            "en-GB": "sct"
+        },
+        "meta": {
+            "canonical": false,
+            "canonical-mask": 0,
+            "stable-name": false
+        },
+        "edges": {
+            "from": ["uk:sct"]
+        }
+    },
+    "uk:eng": {
+        "names": {
+            "en-GB": "England",
+            "cy": "Lloegr"
+        },
+        "meta": {
+            "canonical": false,
+            "canonical-mask": 0,
+            "stable-name": true
+        },
+        "edges": {
+            "from": ["country:gb"]
+        }
+    },
+    "synonym:eng:eng": {
+        "names": {
+            "en-GB": "eng"
+        },
+        "meta": {
+            "canonical": false,
+            "canonical-mask": 0,
+            "stable-name": false
+        },
+        "edges": {
+            "from": ["uk:eng"]
+        }
+    },
+    "uk:gbn": {
+        "names": {
+            "en-GB": "Great Britain",
+            "cy": "Prydain Fawr"
+        },
+        "meta": {
+            "canonical": false,
+            "canonical-mask": 0,
+            "stable-name": true
+        },
+        "edges": {
+            "from": ["country:gb"]
+        }
+    },
+    "synonym:gbn:gbn": {
+        "names": {
+            "en-GB": "gbn"
+        },
+        "meta": {
+            "canonical": false,
+            "canonical-mask": 0,
+            "stable-name": false
+        },
+        "edges": {
+            "from": ["uk:gbn"]
+        }
+    },
+    "territory:im": {
+        "names": {
+            "en-GB": "Isle of Man",
+            "cy": "Ynys Manaw"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "territory:hk": {
+        "names": {
+            "en-GB": "Hong Kong",
+            "cy": "Hong Kong"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "territory:sx": {
+        "names": {
+            "en-GB": "Sint Maarten (Dutch part)",
+            "cy": "Sint Maarten (rhan Iseldireg)"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "synonym:sx:sx": {
+        "names": {
+            "en-GB": "Sint Maarten"
+        },
+        "meta": {
+            "canonical": false,
+            "canonical-mask": 0,
+            "stable-name": false
+        },
+        "edges": {
+            "from": ["territory:sx"]
+        }
+    },
+    "territory:bq-se": {
+        "names": {
+            "en-GB": "Sint Eustatius",
+            "cy": "Sint Eustatius"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "territory:bat": {
+        "names": {
+            "en-GB": "British Antarctic Territory",
+            "cy": "Tiriogaeth Antarctig Prydain"
+        },
+        "meta": {
+            "canonical": false,
+            "canonical-mask": 0,
+            "stable-name": true
+        },
+        "edges": {
+            "from": ["country:gb"]
+        }
+    },
+    "territory:bat": {
+        "names": {
+            "en-GB": "British Antarctic Territory",
+            "cy": "Tiriogaeth Antarctig Prydain"
+        },
+        "meta": {
+            "canonical": false,
+            "canonical-mask": 0,
+            "stable-name": true
+        },
+        "edges": {
+            "from": ["country:gb"]
+        }
+    },
+    "territory:aq": {
+        "names": {
+            "en-GB": "Antarctica",
+            "cy": "Antarctica"
+        },
+        "meta": {
+            "canonical": false,
+            "canonical-mask": 0,
+            "stable-name": true
+        },
+        "edges": {
+            "from": ["country:gb", "country:fr", "country:nz", "country:no", "country:au", "country:cl", "country:ar"]
+        }
+    },
+    "country:fr": {
+        "names": {
+            "en-GB": "France",
+            "cy": "France"
+        },
+        "meta": {
+            "canonical": true,
+            "canonical-mask": 1,
+            "stable-name": true
+        },
+        "edges": {
+            "from": []
+        }
+    },
+    "synonym:fr:fr": {
+        "names": {
+            "en-GB": "The French Republic"
+        },
+        "meta": {
+            "canonical": false,
+            "canonical-mask": 0,
+            "stable-name": false
+        },
+        "edges": {
+            "from": ["country:fr"]
+        }
+    },
+    "endonym:fr": {
+        "names": {
+            "fr-FR": "République Française"
+        },
+        "meta": {
+            "canonical": false,
+            "canonical-mask": 0,
+            "stable-name": false
+        },
+        "edges": {
+            "from": ["country:fr"]
+        }
+    }
+}
