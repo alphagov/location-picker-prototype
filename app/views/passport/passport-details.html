@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% import "../includes/location_picker.html" as locationPicker %}
+
+{% block page_title %}
+  Location Picker Example 5
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/passport/personal-details">Back</a>
+
+      <h1 class="heading-large">
+        Your passport details
+      </h1>
+
+      <form class="form" method="POST" action="/passport/application-complete">
+
+        {{ locationPicker.macro('Country of birth', 'en-GB', []) }}
+
+        <div class="form-group">
+          <label class="form-label-bold" for="passport-number">Passport number</label>
+          <input class="form-control" id="passport-number" type="text">
+        </div>
+
+        <div class="form-group">
+          <fieldset>
+            <legend>
+              <span class="form-label-bold">
+                Passport expiry date
+              </span>
+              <span class="form-hint" id="dob-hint">For example, 28 2 2017</span>
+            </legend>
+            <div class="form-date">
+              <div class="form-group form-group-day">
+                <label class="form-label" for="dob-day">Day</label>
+                <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31" aria-describedby="dob-hint">
+              </div>
+              <div class="form-group form-group-month">
+                <label class="form-label" for="dob-month">Month</label>
+                <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+              </div>
+              <div class="form-group form-group-year">
+                <label class="form-label" for="dob-year">Year</label>
+                <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+
+
+</main>
+{% endblock %}
+
+{% block body_end %}
+  <!-- Javascript -->
+  
+{% endblock %}
