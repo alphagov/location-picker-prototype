@@ -82,4 +82,21 @@ router.get('/demo-picker.cy', function (req, res) {
   })
 })
 
+router.all('/passport/passport-details', function (req, res) {
+  var locale = 'en-GB'
+
+  res.render('passport/passport-details', {
+    html_lang: 'en',
+    graph: demoLocationService.locationGraph,
+    locations: demoLocationService.canonicalLocationList(locale),
+    reverseMap: demoLocationService.locationReverseMap(locale),
+    locale: locale
+  })
+})
+
+router.all('/passport/application-complete', function (req, res) {
+  res.render('passport/application-complete', {
+  })
+})
+
 module.exports = router
