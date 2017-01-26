@@ -205,6 +205,7 @@
           if (showNoResults) {
             syncResults([])
           } else {
+            query = query.replace(/\./g,'')
             countries.search(query, (rawResults) => {
               sortExactMatchesFirst(rawResults, query)
 
