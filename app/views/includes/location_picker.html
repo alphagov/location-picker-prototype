@@ -184,6 +184,18 @@
 
       var id = 'location-select-box'
 
+      function sortExactMatchesFirst (data, query) {
+        data.sort((a, b) => a === query ? -1 : (b === query ? 1 : 0 ))
+      }
+
+      function startsWith (str, query) {
+        return str.toLowerCase().indexOf(query.toLowerCase()) === 0
+      }
+
+      function sortResultsByWordMatch (data, query) {
+        data.sort((a, b) => startsWith(a, query) ? -1 : (startsWith(b, query) ? 1 : 0))
+      }
+
       AccessibleTypeahead({
         element: container[0],
         id: id,
@@ -193,7 +205,12 @@
             syncResults([])
           } else {
             countries.search(query, (rawResults) => {
+              sortExactMatchesFirst(rawResults, query)
+
               var presentableResults = presentResults(rawResults)
+
+              sortResultsByWordMatch(presentableResults, query)
+
               syncResults(presentableResults)
             })
           }
