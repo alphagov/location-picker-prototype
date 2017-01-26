@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  Location Picker Prototypes
+Location Picker Prototypes
 {% endblock %}
 
 {% block content %}
@@ -18,6 +18,22 @@
         These are location picker widgets that read data from the <a href="https://country.register.gov.uk/" target="_blank">country register</a>
         and the <a href="https://territory.register.gov.uk/" target="_blank">territory register</a>.
       </p>
+
+      <h2 class="heading-large">Demos</h2>
+
+      <h2 class="heading-medium"><a href="/demo-picker">Demo 1: basic picker</a></h2>
+
+      <h2 class="heading-medium"><a href="/passport/start">Demo 2: passport details</a></h2>
+
+      <p>
+       A location picker is used to collect country of birth as part of passport details.
+      </p>
+
+      <h2 class="heading-large">Code</h2>
+
+      Code for the location picker can be found <a href="https://github.com/openregister/picker-prototypes">on Github</a>.
+
+      <h2 class="heading-large">Development versions</h2>
 
       <h2 class="heading-medium"><a href="/country-picker-1">Example 1: Plain JavaScript + plain register</a></h2>
 
@@ -50,8 +66,8 @@
         This example builds upon the previous one by adding progressive
         enhancement and styling tweaks, both inspired by
         <a
-          href="https://github.com/dwpdigitaltech/hrt-prototype/blob/master/app/assets/javascripts/modules/country-autocomplete.js"
-          target="_blank"
+        href="https://github.com/dwpdigitaltech/hrt-prototype/blob/master/app/assets/javascripts/modules/country-autocomplete.js"
+        target="_blank"
         >DWP's implementation</a>. It also moves part of the initial data processing logic
         server-side, has separate pages for English and Welsh, is compatible with more
         browsers, has some minor usability fixes, and uses a much larger dataset.
