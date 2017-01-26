@@ -188,10 +188,15 @@
         element: container[0],
         id: id,
         source: (query, syncResults) => {
-          countries.search(query, (rawResults) => {
-            var presentableResults = presentResults(rawResults)
-            syncResults(presentableResults)
-          })
+          const showNoResults = query.length <= 1
+          if (showNoResults) {
+            syncResults([])
+          } else {
+            countries.search(query, (rawResults) => {
+              var presentableResults = presentResults(rawResults)
+              syncResults(presentableResults)
+            })
+          }
         }
       })
 
