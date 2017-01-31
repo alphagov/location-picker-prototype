@@ -1,0 +1,11 @@
+language: node_js
+deploy:
+  provider: cloudfoundry
+  api: https://api.cloud.service.gov.uk
+  username: theodor.vararu@digital.cabinet-office.gov.uk
+  password:
+    secure: NovjHUGDEkR+WwR7Zn3CS55zc8HP4pAjMgixCajXWl6GxDhGf2koL5KA6OJIbt3MLx7LlENj8YiKh5Ywt7Dr5nZbh3IygHAM7kDeZbYiOcOjG+URzJ0GGcVL8WQVXPsKTae1pqwswPsy9ewS8BVwdnLmg19rAuhcVeky6ccM/ASjzf2Birqmtuhw+yzfZ6J+lq57noeglK3Zfoymz8BssOF8NedKrRwu3o+WvjSTGgfS1YtZxqazGSr1wRznsNyJrKE13ydiD7p7oa5Hv0gAAMcnMmGIp/plI9RF/XyxdA59wUukpJXYVGZljQa+pDKdsSXV8u7wLcHAvNxKUVlLLSWoite3aTkjuV+Ls2ykL08ZTWFONLFlWgCk1rEdHNMf6FeiB0uBXjFVcj9jUyv0XdS1kju4/6jMUT84K+l5maktnkUXxhkO3CV8grAHd7e6LdUQFBX7h6qId2X9wLRyjkoMPamYy9KtsSmyEMPh3X5Nq3mKzrW4EA8i/2kBaAyzuLwXgP3vrsnbVskN+Wbj7MKEwmgO7RBnoJwRVFaS9OcocQnQVCa6wBEh6A46LmbFKMJAhY08uEQ2btAo2nYex6LLe6eo6pACXebbwXuKk4omOqshXfzCbk9Z+kx8o3yVqXkYJfIXUpneKprHOqixyIbH5SaBKqxcewMTjr/AmX0=
+  organization: openregister
+  space: sandbox
+  on:
+    repo: openregister/picker-prototypes
