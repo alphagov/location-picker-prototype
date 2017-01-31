@@ -4,9 +4,8 @@
   Location Picker Example 4
 {% endblock %}
 
-{% block content %}
-<main id="content" role="main">
-
+{% block head %}
+  {% include "includes/head.html" %}
   <style>
     .twitter-typeahead {
       width: 100%;
@@ -73,6 +72,10 @@
       }
     }
   </style>
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
 
   <form action="/docs/tutorials-and-examples" method="post" class="form">
 
