@@ -2587,6 +2587,19 @@
             "from": ["country:gb"]
         }
     },
+    "synonym:gb:gbr": {
+        "names": {
+            "en-GB": "gbr"
+        },
+        "meta": {
+            "canonical": false,
+            "canonical-mask": 0,
+            "stable-name": false
+        },
+        "edges": {
+            "from": ["country:gb"]
+        }
+    },
     "synonym:gb:uk": {
         "names": {
             "en-GB": "uk"
