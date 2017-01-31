@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% import "../includes/location_picker.html" as locationPicker %}
+
+{% block page_title %}
+  Location Picker Example 5
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/country-of-birth/country-of-birth">Back</a>
+
+      <h1 class="heading-large">
+        What was the last country you visited?
+      </h1>
+
+      <form class="form" method="POST" action="/country-of-birth/country-visited" autocomplete="off">
+
+        {{ locationPicker.macro('', locale, graph, reverseMap) }}
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+
+
+</main>
+{% endblock %}
+
+{% block body_end %}
+  <!-- Javascript -->
+
+{% endblock %}
