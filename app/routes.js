@@ -94,8 +94,48 @@ router.all('/passport/passport-details', function (req, res) {
   })
 })
 
-router.all('/passport/application-complete', function (req, res) {
+router.get('/passport/application-complete', function (req, res) {
   res.render('passport/application-complete', {
+  })
+})
+
+router.post('/passport/application-complete', function (req, res) {
+  res.redirect('/passport/application-complete')
+})
+
+router.get('/country-of-birth/country-of-birth', function (req, res) {
+  var locale = 'en-GB'
+  res.render('country-of-birth/country-of-birth', {
+    html_lang: 'en',
+    graph: demoLocationService.locationGraph,
+    locations: demoLocationService.canonicalLocationList(locale),
+    reverseMap: demoLocationService.locationReverseMap(locale),
+    locale: locale
+  })
+})
+
+router.post('/country-of-birth/country-of-birth', function (req, res) {
+  res.redirect('/country-of-birth/country-visited')
+})
+
+router.get('/country-of-birth/country-visited', function (req, res) {
+  var locale = 'en-GB'
+
+  res.render('country-of-birth/country-visited', {
+    html_lang: 'en',
+    graph: demoLocationService.locationGraph,
+    locations: demoLocationService.canonicalLocationList(locale),
+    reverseMap: demoLocationService.locationReverseMap(locale),
+    locale: locale
+  })
+})
+
+router.post('/country-of-birth/country-visited', function (req, res) {
+  res.redirect('/country-of-birth/application-complete')
+})
+
+router.get('/country-of-birth/application-complete', function (req, res) {
+  res.render('country-of-birth/application-complete', {
   })
 })
 
