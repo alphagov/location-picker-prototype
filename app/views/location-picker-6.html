@@ -91,7 +91,7 @@
   <script type="text/babel">
     $(document).ready(function () {
       var preferredLocale = 'en-GB'
-      var showPaths = false
+      var showPaths = true
 
       function isCanonicalNode (node) {
         return node.meta.canonical
@@ -148,8 +148,13 @@
             var canonicalName = presentableName(cnwp.node, preferredLocale)
             var pathToName = ''
             if (showPaths && cnwp.path.length) {
-              var stableNamesInPath = cnwp.path.map(pathNode => presentableName(pathNode.node, pathNode.locale))
-              pathToName = ` (path: ${stableNamesInPath.join(' > ')})`
+              var stableNamesInPath = cnwp.path
+                .filter(pathNode => pathNode.node.meta['stable-name'])
+                .map(pathNode => presentableName(pathNode.node, pathNode.locale))
+              var lastNode = stableNamesInPath.pop()
+              if (lastNode) {
+                pathToName = ` (${lastNode})`
+              }
             }
             return `${canonicalName}${pathToName}`
           })
@@ -178,10 +183,17 @@
         element: container[0],
         id: id,
         source: (query, syncResults) => {
-          countries.search(query, (rawResults) => {
-            var presentableResults = presentResults(rawResults)
-            syncResults(presentableResults)
-          })
+          const showNoResults = query.length <= 1
+          if (showNoResults) {
+            syncResults([])
+          } else {
+            query = query.replace(/\./g,'')
+            countries.search(query, (rawResults) => {
+              var presentableResults = presentResults(rawResults)
+
+              syncResults(presentableResults)
+            })
+          }
         }
       })
 
