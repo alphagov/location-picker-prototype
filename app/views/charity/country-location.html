@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% import "../includes/location_picker.html" as locationPicker %}
+
+{% block page_title %}
+Location Picker Example 5
+{% endblock %}
+
+{% block proposition_header %}
+<!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/charity/start">Back</a>
+
+      <h1 class="heading-large">
+        Did your charity operate outside England and Wales during 2016?
+      </h1>
+
+      <form class="form" method="GET" action="/charity/application-complete" autocomplete="off">
+
+        <div class="form-group">
+          <fieldset class="">
+
+            <legend class="visually-hidden">Did your charity operate outside England and Wales during the financial period covered by this annual return?</legend>
+
+            <label class="block-label selection-button-radio" data-target="outside-country-yes" for="radio-inline-1">
+              <input id="radio-inline-1" type="radio" name="radio-inline-group" value="Yes">
+              Yes
+            </label>
+
+            <div class="panel panel-border-narrow js-hidden" id="outside-country-yes">
+              {{ locationPicker.macro('Which country did you operate in most recently?', locale, graph, reverseMap) }}
+            </div>
+
+            <label class="block-label selection-button-radio" data-target="outside-country-no" for="radio-inline-2">
+              <input id="radio-inline-2" type="radio" name="radio-inline-group" value="No">
+              No
+            </label>
+
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+
+
+</main>
+{% endblock %}

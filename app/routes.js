@@ -163,4 +163,16 @@ router.get('/country-of-birth/application-complete', function (req, res) {
   })
 })
 
+router.get('/charity/country-location', function (req, res) {
+  var locale = 'en-GB'
+
+  res.render('charity/country-location', {
+    html_lang: 'en',
+    graph: demoLocationService.locationGraph,
+    locations: demoLocationService.canonicalLocationList(locale),
+    reverseMap: demoLocationService.locationReverseMap(locale),
+    locale: locale
+  })
+})
+
 module.exports = router
