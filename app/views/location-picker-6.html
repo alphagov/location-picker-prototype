@@ -145,6 +145,9 @@
         cnwp.weight = 1
 
         const name = presentableName(cnwp.node, preferredLocale)
+        const isUk = name === 'United Kingdom'
+        cnwp.weight += isUk ? 100000 : 0
+
         const isExactMatch = name.toLowerCase() === query.toLowerCase()
         cnwp.weight += isExactMatch ? 10000 : 0
 
