@@ -47,24 +47,6 @@
         <input type="submit" class="button" value="Parhau">
       {% endif %}
     </div>
-
-    <h2 class="heading-large">Debugging options</h2>
-
-    <p>
-      {% if locale === 'en-GB' %}
-        <a href="/location-picker-5.cy" lang="cy" hreflang="cy">Fersiwn Cymraeg o'r dudalen hon</a>
-      {% else %}
-        <a href="/location-picker-5" lang="en" hreflang="en">English version of this page</a>
-      {% endif %}
-    </p>
-
-    <div class="form-group">
-      <label class="block-label selection-button-checkbox" for="location-show-paths">
-        <input id="location-show-paths" name="show-paths" type="checkbox" value="show-paths">
-        Show paths (useful for debugging, will cause duplicate countries to appear where more than one path exists)
-      </label>
-    </div>
-
   </form>
 
 </main>
@@ -76,8 +58,8 @@
   <!-- GOV.UK Prototype kit {{releaseVersion}} -->
 
   <script src="/public/javascripts/bloodhound.js"></script>
-  <script src="https://unpkg.com/accessible-typeahead@0.2.0"></script>
-  <link href="https://unpkg.com/accessible-typeahead@0.2.0/examples/styled.css" rel="stylesheet">
+  <script src="https://unpkg.com/accessible-typeahead@0.2.1"></script>
+  <link href="https://unpkg.com/accessible-typeahead@0.2.1/examples/styled.css" rel="stylesheet">
   <script src="https://unpkg.com/lodash@4.17.4" type="text/javascript"></script>
   <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
   <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
@@ -91,7 +73,7 @@
   <script type="text/babel">
     $(document).ready(function () {
       var preferredLocale = 'en-GB'
-      var showPaths = false
+      var showPaths = true
 
       function isCanonicalNode (node) {
         return node.meta.canonical
@@ -133,27 +115,90 @@
         }
       }
 
+      function indexOfLowerCase (str, prefix) {
+        return str.toLowerCase().indexOf(prefix.toLowerCase())
+      }
+
+      // Takes a canonical node with the path to reach it, and the typed in query.
+      // Returns the same node and path, with added weight based on a number of criteria.
+      // Higher weight means higher priority, so it should be ranked higher in the list.
+      function addWeight (canonicalNodeWithPath, query) {
+        const cnwp = canonicalNodeWithPath
+        cnwp.weight = 1
+
+        const name = presentableName(cnwp.node, preferredLocale)
+        const isUk = name === 'United Kingdom'
+        cnwp.weight += isUk ? 100000 : 0
+
+        const isExactMatch = name.toLowerCase() === query.toLowerCase()
+        cnwp.weight += isExactMatch ? 10000 : 0
+
+        const synonymIsExactMatch = cnwp.path
+          .map(pathNode => presentableName(pathNode.node, pathNode.locale))
+          .map(nameInPath => nameInPath.toLowerCase())
+          .indexOf(query.toLowerCase()) !== -1
+        cnwp.weight += synonymIsExactMatch ? 1000 : 0
+
+        const indexOfQuery = indexOfLowerCase(name, query)
+        const canonicalNameStartsWithQuery = indexOfQuery === 0
+        cnwp.weight += canonicalNameStartsWithQuery ? 100 : 0
+
+        const canonicalNameContainsQuery = indexOfQuery > 0
+        cnwp.weight += canonicalNameContainsQuery ? 10 : 0
+
+        // Longer paths mean canonical node is further from matched synonym, so rank it lower.
+        cnwp.weight += cnwp.path.length * -1
+
+        return cnwp
+      }
+
+      function byWeightAndThenAlphabetically (a, b) {
+        const aName = presentableName(a.node, preferredLocale)
+        const bName = presentableName(b.node, preferredLocale)
+        return (a.weight > b.weight)
+          ? -1
+          : (a.weight < b.weight)
+            ? 1
+            // Weights are equal, sort alphabetically by name.
+            : (aName < bName)
+              ? -1
+              : (aName > bName)
+                ? 1
+                : 0
+      }
+
       // Bloodhound gives us back a list of results that includes synonyms, typos,
       // endonyms and other things we don't want the user to see.
       // This function transforms those into a list of stable canonical country names.
-      function presentResults (rawResults) {
+      function presentResults (rawResults, query) {
         var nodesWithLocales = rawResults.map(r => reverseMap[r])
 
         var canonicalNodesWithPaths = nodesWithLocales.reduce((canonicalNodes, nwl) => {
           return canonicalNodes.concat(findCanonicalNodeWithPath(nwl.node, nwl.locale, []))
         }, [])
 
-        var presentableNodes = _.uniq(
-          canonicalNodesWithPaths.map(cnwp => {
-            var canonicalName = presentableName(cnwp.node, preferredLocale)
-            var pathToName = ''
-            if (showPaths && cnwp.path.length) {
-              var stableNamesInPath = cnwp.path.map(pathNode => presentableName(pathNode.node, pathNode.locale))
-              pathToName = ` (path: ${stableNamesInPath.join(' > ')})`
+        const canonicalNodesWithPathsAndWeights = canonicalNodesWithPaths.map(cnwp => addWeight(cnwp, query))
+
+        canonicalNodesWithPathsAndWeights.sort(byWeightAndThenAlphabetically)
+
+        const uniqueNodesWithPathsAndWeights = _.uniqBy(canonicalNodesWithPathsAndWeights, (cnwp) => {
+          return presentableName(cnwp.node, preferredLocale)
+        })
+
+        var presentableNodes = uniqueNodesWithPathsAndWeights.map(cnwp => {
+          var canonicalName = presentableName(cnwp.node, preferredLocale)
+          var pathToName = ''
+          if (showPaths && cnwp.path.length) {
+            var stableNamesInPath = cnwp.path
+              .filter(pathNode => pathNode.node.meta['stable-name'])
+              .map(pathNode => presentableName(pathNode.node, pathNode.locale))
+            var lastNode = stableNamesInPath.pop()
+            if (lastNode) {
+              pathToName = ` (${lastNode})`
             }
-            return `${canonicalName}${pathToName}`
-          })
-        )
+          }
+          return `${canonicalName}${pathToName}`
+        })
 
         return presentableNodes
       }
@@ -178,10 +223,17 @@
         element: container[0],
         id: id,
         source: (query, syncResults) => {
-          countries.search(query, (rawResults) => {
-            var presentableResults = presentResults(rawResults)
-            syncResults(presentableResults)
-          })
+          const showNoResults = query.length <= 1
+          if (showNoResults) {
+            syncResults([])
+          } else {
+            query = query.replace(/\./g,'')
+            countries.search(query, (rawResults) => {
+              var presentableResults = presentResults(rawResults, query)
+
+              syncResults(presentableResults)
+            })
+          }
         }
       })
 
@@ -189,10 +241,6 @@
       label.attr('for', id)
 
       select.hide()
-
-      $('#location-show-paths').on('change', (evt) => {
-        showPaths = evt.target.checked
-      })
     })
   </script>
 {% endblock %}
