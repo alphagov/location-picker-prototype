@@ -2898,5 +2898,57 @@
         "edges": {
             "from": ["country:fr"]
         }
+    },
+    "synonym:us:us": {
+        "names": {
+            "en-GB": "us"
+        },
+        "meta": {
+            "canonical": false,
+            "canonical-mask": 0,
+            "stable-name": false
+        },
+        "edges": {
+            "from": ["country:us"]
+        }
+    },
+    "synonym:us:usa": {
+        "names": {
+            "en-GB": "usa"
+        },
+        "meta": {
+            "canonical": false,
+            "canonical-mask": 0,
+            "stable-name": false
+        },
+        "edges": {
+            "from": ["country:us"]
+        }
+    },
+    "synonym:us:america": {
+        "names": {
+            "en-GB": "america"
+        },
+        "meta": {
+            "canonical": false,
+            "canonical-mask": 0,
+            "stable-name": false
+        },
+        "edges": {
+            "from": ["country:us"]
+        }
+    },
+    "synonym:gb:jersey": {
+        "names": {
+            "en-GB": "Jersey"
+        },
+        "meta": {
+            "canonical": false,
+            "canonical-mask": 0,
+            "stable-name": true
+        },
+        "edges": {
+            "from": ["country:gb"]
+        }
     }
 }
