@@ -1,59 +1,4 @@
 {% macro macro(label, locale='en-GB', graph={}, reverseMap={}) %}
-<style>
-.tt-menu {
-  width: 100%;
-  width: calc(100% - 4px);
-  max-height: 342px;
-  overflow-x: hidden;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  background-color: #fff;
-  border: 2px solid #6f777b;
-  border-top: 0;
-}
-
-.tt-suggestion {
-  position: relative;
-  display: block;
-  margin-bottom: -2px;
-  padding: 5px 4px 4px;
-  border: solid #bfc1c3;
-  border-width: 2px 0;
-  font-family: "nta", Arial, sans-serif;
-  text-transform: none;
-  font-size: 16px;
-  line-height: 1.25;
-  color: #0b0c0c;
-  cursor: pointer;
-}
-
-@media (min-width: 641px) {
-  .tt-suggestion {
-    font-size: 19px;
-    line-height: 1.31579;
-  }
-}
-
-.tt-suggestion:first-of-type {
-  border-top-width: 0;
-}
-
-.tt-suggestion:focus {
-  z-index: 1;
-  background-color: #2b8cc4;
-  border-color: #2b8cc4;
-  color: white;
-  outline: none;
-}
-
-@media (min-width: 641px) {
-  .tt-menu {
-    width: 50%;
-    width: calc(50% - 4px);
-  }
-}
-</style>
 
 <div class="form-group">
   <label class="form-label-bold" for="location-select-dropdown">
@@ -87,7 +32,8 @@
 
   <script src="https://unpkg.com/ua-parser-js@0.7.12"></script>
   <script src="/public/javascripts/bloodhound.js"></script>
-  <script src="https://unpkg.com/accessible-typeahead@0.1.3"></script>
+  <script src="https://unpkg.com/accessible-typeahead@0.2.1"></script>
+  <link rel="stylesheet" href="https://unpkg.com/accessible-typeahead@0.2.1/examples/styled.css"></script>
   <script src="https://unpkg.com/lodash@4.17.4" type="text/javascript"></script>
   <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
   <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
@@ -184,7 +130,7 @@
 
       // Find the existing select and enhance it to the typeahead.
       var select = $('#location-select-dropdown')
-      var container = $('<div></div>')
+      var container = $('<div class="form-control-1-2"></div>')
       select.after(container)
 
       var id = 'location-select-box'
