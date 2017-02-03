@@ -199,7 +199,11 @@
 
         canonicalNodesWithPathsAndWeights.sort(byWeightAndThenAlphabetically)
 
-        var presentableNodes = canonicalNodesWithPathsAndWeights.map(cnwp => {
+        const uniqueNodesWithPathsAndWeights = _.uniqBy(canonicalNodesWithPathsAndWeights, (cnwp) => {
+          return presentableName(cnwp.node, preferredLocale)
+        })
+
+        var presentableNodes = uniqueNodesWithPathsAndWeights.map(cnwp => {
           var canonicalName = presentableName(cnwp.node, preferredLocale)
           var pathToName = ''
           if (showPaths && cnwp.path.length) {
@@ -214,9 +218,7 @@
           return `${canonicalName}${pathToName}`
         })
 
-        const uniquePresentableNodes = _.uniq(presentableNodes)
-
-        return uniquePresentableNodes
+        return presentableNodes
       }
 
       // The keys of the reverseMap represent all the names/synonyms/endonyms, so
