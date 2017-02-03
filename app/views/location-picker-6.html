@@ -47,24 +47,6 @@
         <input type="submit" class="button" value="Parhau">
       {% endif %}
     </div>
-
-    <h2 class="heading-large">Debugging options</h2>
-
-    <p>
-      {% if locale === 'en-GB' %}
-        <a href="/location-picker-5.cy" lang="cy" hreflang="cy">Fersiwn Cymraeg o'r dudalen hon</a>
-      {% else %}
-        <a href="/location-picker-5" lang="en" hreflang="en">English version of this page</a>
-      {% endif %}
-    </p>
-
-    <div class="form-group">
-      <label class="block-label selection-button-checkbox" for="location-show-paths">
-        <input id="location-show-paths" name="show-paths" type="checkbox" value="show-paths">
-        Show paths (useful for debugging, will cause duplicate countries to appear where more than one path exists)
-      </label>
-    </div>
-
   </form>
 
 </main>
@@ -259,10 +241,6 @@
       label.attr('for', id)
 
       select.hide()
-
-      $('#location-show-paths').on('change', (evt) => {
-        showPaths = evt.target.checked
-      })
     })
   </script>
 {% endblock %}
