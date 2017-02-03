@@ -199,24 +199,24 @@
 
         canonicalNodesWithPathsAndWeights.sort(byWeightAndThenAlphabetically)
 
-        var presentableNodes = _.uniq(
-          canonicalNodesWithPathsAndWeights.map(cnwp => {
-            var canonicalName = presentableName(cnwp.node, preferredLocale)
-            var pathToName = ''
-            if (showPaths && cnwp.path.length) {
-              var stableNamesInPath = cnwp.path
-                .filter(pathNode => pathNode.node.meta['stable-name'])
-                .map(pathNode => presentableName(pathNode.node, pathNode.locale))
-              var lastNode = stableNamesInPath.pop()
-              if (lastNode) {
-                pathToName = ` (${lastNode})`
-              }
+        var presentableNodes = canonicalNodesWithPathsAndWeights.map(cnwp => {
+          var canonicalName = presentableName(cnwp.node, preferredLocale)
+          var pathToName = ''
+          if (showPaths && cnwp.path.length) {
+            var stableNamesInPath = cnwp.path
+              .filter(pathNode => pathNode.node.meta['stable-name'])
+              .map(pathNode => presentableName(pathNode.node, pathNode.locale))
+            var lastNode = stableNamesInPath.pop()
+            if (lastNode) {
+              pathToName = ` (${lastNode})`
             }
-            return `${canonicalName}${pathToName}`
-          })
-        )
+          }
+          return `${canonicalName}${pathToName}`
+        })
 
-        return presentableNodes
+        const uniquePresentableNodes = _.uniq(presentableNodes)
+
+        return uniquePresentableNodes
       }
 
       // The keys of the reverseMap represent all the names/synonyms/endonyms, so
