@@ -131,9 +131,9 @@ router.get('/country-of-birth/country-of-birth', function (req, res) {
   var locale = 'en-GB'
   res.render('country-of-birth/country-of-birth', {
     html_lang: 'en',
-    graph: demoLocationService.locationGraph,
-    locations: demoLocationService.canonicalLocationList(locale),
-    reverseMap: demoLocationService.locationReverseMap(locale),
+    graph: locationServiceV2.locationGraph,
+    locations: locationServiceV2.canonicalLocationList(locale),
+    reverseMap: locationServiceV2.locationReverseMap(locale),
     locale: locale
   })
 })
@@ -147,14 +147,46 @@ router.get('/country-of-birth/country-visited', function (req, res) {
 
   res.render('country-of-birth/country-visited', {
     html_lang: 'en',
-    graph: demoLocationService.locationGraph,
-    locations: demoLocationService.canonicalLocationList(locale),
-    reverseMap: demoLocationService.locationReverseMap(locale),
+    graph: locationServiceV2.locationGraph,
+    locations: locationServiceV2.canonicalLocationList(locale),
+    reverseMap: locationServiceV2.locationReverseMap(locale),
     locale: locale
   })
 })
 
 router.post('/country-of-birth/country-visited', function (req, res) {
+  res.redirect('/country-of-birth/country-visit-next')
+})
+
+router.get('/country-of-birth/country-visit-next', function (req, res) {
+  var locale = 'en-GB'
+
+  res.render('country-of-birth/country-visit-next', {
+    html_lang: 'en',
+    graph: locationServiceV2.locationGraph,
+    locations: locationServiceV2.canonicalLocationList(locale),
+    reverseMap: locationServiceV2.locationReverseMap(locale),
+    locale: locale
+  })
+})
+
+router.post('/country-of-birth/country-visit-next', function (req, res) {
+  res.redirect('/country-of-birth/country-visit-other')
+})
+
+router.get('/country-of-birth/country-visit-other', function (req, res) {
+  var locale = 'en-GB'
+
+  res.render('country-of-birth/country-visit-other', {
+    html_lang: 'en',
+    graph: locationServiceV2.locationGraph,
+    locations: locationServiceV2.canonicalLocationList(locale),
+    reverseMap: locationServiceV2.locationReverseMap(locale),
+    locale: locale
+  })
+})
+
+router.post('/country-of-birth/country-visit-other', function (req, res) {
   res.redirect('/country-of-birth/application-complete')
 })
 
@@ -168,11 +200,12 @@ router.get('/charity/country-location', function (req, res) {
 
   res.render('charity/country-location', {
     html_lang: 'en',
-    graph: demoLocationService.locationGraph,
-    locations: demoLocationService.canonicalLocationList(locale),
-    reverseMap: demoLocationService.locationReverseMap(locale),
+    graph: locationServiceV2.locationGraph,
+    locations: locationServiceV2.canonicalLocationList(locale),
+    reverseMap: locationServiceV2.locationReverseMap(locale),
     locale: locale
   })
+
 })
 
 module.exports = router
