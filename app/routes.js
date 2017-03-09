@@ -1,6 +1,7 @@
 var express = require('express')
 var locationServiceV1 = require('./services/location-v1')
 var locationServiceV2 = require('./services/location-v2')
+var locationServiceV3 = require('./services/location-v3')
 var demoLocationService = require('./services/demo-location-v1')
 var router = express.Router()
 
@@ -87,9 +88,9 @@ router.get('/location-picker-7', function (req, res) {
 
   res.render('location-picker-7', {
     html_lang: 'en',
-    graph: locationServiceV2.locationGraph,
-    locations: locationServiceV2.canonicalLocationList(locale),
-    reverseMap: locationServiceV2.locationReverseMap(locale),
+    graph: locationServiceV3.locationGraph,
+    locations: locationServiceV3.canonicalLocationList(locale),
+    reverseMap: locationServiceV3.locationReverseMap(locale),
     locale: locale
   })
 })
@@ -99,9 +100,9 @@ router.get('/location-picker-7.cy', function (req, res) {
 
   res.render('location-picker-7', {
     html_lang: locale,
-    graph: locationServiceV2.locationGraph,
-    locations: locationServiceV2.canonicalLocationList(locale),
-    reverseMap: locationServiceV2.locationReverseMap(locale),
+    graph: locationServiceV3.locationGraph,
+    locations: locationServiceV3.canonicalLocationList(locale),
+    reverseMap: locationServiceV3.locationReverseMap(locale),
     locale: locale
   })
 })
@@ -229,7 +230,6 @@ router.get('/charity/country-location', function (req, res) {
     reverseMap: locationServiceV2.locationReverseMap(locale),
     locale: locale
   })
-
 })
 
 module.exports = router
