@@ -1,4 +1,4 @@
-{% macro macro(label, locale='en-GB', graph={}, reverseMap={}, showPaths=true) %}
+{% macro macro(label, locale='en-GB', graph={}, reverseMap={}, showPaths=true, autoselect=true, minLength=2) %}
 
 <div class="form-group">
   <label class="form-label-bold" for="location-select-dropdown">
@@ -32,8 +32,8 @@
 
   <script src="https://unpkg.com/ua-parser-js@0.7.12"></script>
   <script src="/public/javascripts/bloodhound.js"></script>
-  <script src="https://unpkg.com/accessible-typeahead@0.2.1"></script>
-  <link rel="stylesheet" href="https://unpkg.com/accessible-typeahead@0.2.1/examples/styled.css">
+  <script src="https://unpkg.com/accessible-typeahead@0.3.0"></script>
+  <link rel="stylesheet" href="https://unpkg.com/accessible-typeahead@0.3.0/examples/styled.css">
   <script src="https://unpkg.com/lodash@4.17.4" type="text/javascript"></script>
   <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
   <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
@@ -194,8 +194,10 @@
       var id = 'location-select-box'
 
       AccessibleTypeahead({
+        autoselect: {{ autoselect }},
         element: container[0],
         id: id,
+        minLength: {{ minLength }},
         source: (query, syncResults) => {
           const showNoResults = query.length <= 1
           if (showNoResults) {
