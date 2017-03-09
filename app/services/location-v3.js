@@ -15,11 +15,8 @@ var locationReverseMap = (preferredLocale) => Object.keys(locationGraph)
     var node = locationGraph[curie]
     Object.keys(node.names).forEach(locale => {
       var name = node.names[locale]
-      // HACK to prevent overriding for example Antarctica,
-      // where the en-GB and cy names are identical, and we want
-      // en-GB to stay on top.
-      var isntDefinedOrLocaleIsEnGb = !revMap[name] || locale === preferredLocale
-      if (isntDefinedOrLocaleIsEnGb) {
+      var isntDefinedAndLocaleIsEnGb = !revMap[name] && locale === preferredLocale
+      if (isntDefinedAndLocaleIsEnGb) {
         revMap[name] = { node, locale }
       }
     })
