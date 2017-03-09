@@ -1,39 +1,65 @@
-{% macro macro(label, locale='en-GB', graph={}, reverseMap={}, showPaths=true, autoselect=true, minLength=2) %}
+{% extends "layout.html" %}
 
-<div class="form-group">
-  <label class="form-label-bold" for="location-select-dropdown">
-    {% if locale === 'en-GB' %}
-    {{label}}
-    {% else %}
-    Lleoliad
-    {% endif %}
-  </label>
-  <select class="form-control" id="location-select-dropdown">
-    <option value="" disabled selected>
+{% block page_title %}
+  Location Picker Example 7
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <form class="form">
+
+    <h1 class="form-title heading-large">
       {% if locale === 'en-GB' %}
-      Choose a location
+        Location picker
       {% else %}
-      Dewiswch leoliad
+        Dewisydd lleoliad
       {% endif %}
-    </option>
-    {% for location in locations %}
-    <option value="{{location}}">{{location}}</option>
-    {% endfor %}
-  </select>
-</div>
+    </h1>
 
-<script src="/public/javascripts/details.polyfill.js"></script>
+    <!-- Location picker -->
+    <div class="form-group">
+      <label class="form-label-bold" for="location-select-dropdown">
+        {% if locale === 'en-GB' %}
+          What was the last country you visited?
+        {% else %}
+          Lleoliad
+        {% endif %}
+      </label>
+      <select class="form-control" id="location-select-dropdown">
+        <option value="" disabled selected>
+          {% if locale === 'en-GB' %}
+            Choose a location
+          {% else %}
+            Dewiswch leoliad
+          {% endif %}
+        </option>
+        {% for location in locations %}
+          <option value="{{location}}">{{location}}</option>
+        {% endfor %}
+      </select>
+    </div>
+
+    <div class="form-group">
+      {% if locale === 'en-GB' %}
+        <input type="submit" class="button" value="Continue">
+      {% else %}
+        <input type="submit" class="button" value="Parhau">
+      {% endif %}
+    </div>
+  </form>
+
+</main>
+{% endblock %}
+
+{% block body_end %}
+  <!-- Javascript -->
   <script src="/public/javascripts/jquery-1.11.3.js"></script>
-  <script src="/public/javascripts/govuk/selection-buttons.js"></script>
-  <script src="/public/javascripts/govuk/shim-links-with-button-role.js"></script>
-  <script src="/public/javascripts/govuk/show-hide-content.js"></script>
-  <script src="/public/javascripts/application.js"></script>
   <!-- GOV.UK Prototype kit {{releaseVersion}} -->
 
-  <script src="https://unpkg.com/ua-parser-js@0.7.12"></script>
   <script src="/public/javascripts/bloodhound.js"></script>
   <script src="https://unpkg.com/accessible-typeahead@0.3.0"></script>
-  <link rel="stylesheet" href="https://unpkg.com/accessible-typeahead@0.3.0/examples/styled.css">
+  <link href="https://unpkg.com/accessible-typeahead@0.3.0/examples/styled.css" rel="stylesheet">
   <script src="https://unpkg.com/lodash@4.17.4" type="text/javascript"></script>
   <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
   <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
@@ -47,7 +73,7 @@
   <script type="text/babel">
     $(document).ready(function () {
       var preferredLocale = 'en-GB'
-      var showPaths = {{ showPaths }}
+      var showPaths = true
 
       function isCanonicalNode (node) {
         return node.meta.canonical
@@ -194,10 +220,10 @@
       var id = 'location-select-box'
 
       AccessibleTypeahead({
-        autoselect: {{ autoselect }},
+        autoselect: true,
         element: container[0],
         id: id,
-        minLength: {{ minLength }},
+        minLength: 2,
         source: (query, syncResults) => {
           const showNoResults = query.length <= 1
           if (showNoResults) {
@@ -219,4 +245,4 @@
       select.hide()
     })
   </script>
-{% endmacro %}
+{% endblock %}
