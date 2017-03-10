@@ -24,7 +24,7 @@
 
       <form class="form" method="POST" action="/passport/application-complete" autocomplete="off">
 
-        {{ locationPicker.macro('Country of birth', locale, graph, reverseMap) }}
+        {{ locationPicker.macro('Country of birth', locale, graph, reverseMap, true) }}
 
         <div class="form-group">
           <label class="form-label-bold" for="passport-number">Passport number</label>
