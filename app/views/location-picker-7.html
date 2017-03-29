@@ -124,30 +124,99 @@
       // Higher weight means higher priority, so it should be ranked higher in the list.
       function addWeight (canonicalNodeWithPath, query) {
         const cnwp = canonicalNodeWithPath
-        cnwp.weight = 1
 
         const name = presentableName(cnwp.node, preferredLocale)
-        const isUk = name === 'United Kingdom'
-        cnwp.weight += isUk ? 100000 : 0
 
-        const isExactMatch = name.toLowerCase() === query.toLowerCase()
-        cnwp.weight += isExactMatch ? 10000 : 0
-
-        const synonymIsExactMatch = cnwp.path
+        const synonym = cnwp.path
           .map(pathNode => presentableName(pathNode.node, pathNode.locale))
           .map(nameInPath => nameInPath.toLowerCase())
-          .indexOf(query.toLowerCase()) !== -1
-        cnwp.weight += synonymIsExactMatch ? 1000 : 0
-
+          .pop()
+        
         const indexOfQuery = indexOfLowerCase(name, query)
-        const canonicalNameStartsWithQuery = indexOfQuery === 0
-        cnwp.weight += canonicalNameStartsWithQuery ? 100 : 0
 
+        const isUk = name === 'United Kingdom'
+        const isUs = name === 'United States'
+
+        // Temporary country weighting
+
+        const ukBias = 2
+        const usBias = 1.5
+        const defaultCountryBias = 1
+
+        const isExactMatchToCanonicalName = name.toLowerCase() === query.toLowerCase()
+
+        const canonicalNameStartsWithQuery = indexOfQuery === 0
+
+        const wordInCanonicalNameStartsWithQuery = name
+            .split(' ')
+            .filter(w => w.toLowerCase().indexOf(query.toLowerCase()) === 0)
+            .length > 0
+
+        // TODO: make these const
+        var synonymIsExactMatch = false
+        var synonymStartsWithQuery = false
+        var wordInSynonymStartsWith = false
+        var indexOfSynonymQuery = false
+        var synonymContainsQuery = false
+
+        if (synonym) {
+
+          synonymIsExactMatch = synonym === query.toLowerCase()
+
+          synonymStartsWithQuery = synonym
+            .indexOf(query.toLowerCase()) === 0
+
+          wordInSynonymStartsWith = synonym
+            .split(' ')
+            .filter(w => w.toLowerCase().indexOf(query.toLowerCase()) === 0)
+            .length > 0
+
+          indexOfSynonymQuery = indexOfLowerCase(synonym, query)
+        }
+
+        // TODO: Contains consts don't work
         const canonicalNameContainsQuery = indexOfQuery > 0
-        cnwp.weight += canonicalNameContainsQuery ? 10 : 0
+        synonymContainsQuery = indexOfSynonymQuery > 0
+
+        // Canonical name matches
+        if (isExactMatchToCanonicalName){
+          cnwp.weight = 100
+        }
+        else if (canonicalNameStartsWithQuery){
+          cnwp.weight = 76
+        }
+        else if (wordInCanonicalNameStartsWithQuery){
+          cnwp.weight = 60
+        }
+        // Synonmn matches
+        else if (synonymIsExactMatch){
+          cnwp.weight = 50
+        }
+        else if (synonymStartsWithQuery){
+          cnwp.weight = 45
+        }
+        else if (wordInSynonymStartsWith){
+          cnwp.weight = 37
+        }
+        // Contains (DOES NOT WORK YET)
+        else if (canonicalNameContainsQuery){
+          cnwp.weight = 25
+        }
+        else if (synonymContainsQuery){
+          cnwp.weight = 22
+        }
+
+        // Not sure if else is possible
+        else cnwp.weight = 15
 
         // Longer paths mean canonical node is further from matched synonym, so rank it lower.
-        cnwp.weight += cnwp.path.length * -1
+        // TODO - pruning multiple matches should happen elsewhere
+        cnwp.weight -= cnwp.path.length
+
+        var countryBias = isUk ? ukBias : defaultCountryBias
+        countryBias = isUs ? usBias : countryBias
+
+        cnwp.weight *= countryBias
 
         return cnwp
       }
@@ -184,6 +253,8 @@
         const uniqueNodesWithPathsAndWeights = _.uniqBy(canonicalNodesWithPathsAndWeights, (cnwp) => {
           return presentableName(cnwp.node, preferredLocale)
         })
+
+        // const uniqueNodesWithPathsAndWeights = canonicalNodesWithPathsAndWeights
 
         var presentableNodes = uniqueNodesWithPathsAndWeights.map(cnwp => {
           var canonicalName = presentableName(cnwp.node, preferredLocale)
