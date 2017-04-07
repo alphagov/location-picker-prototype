@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK Location picker demo
+{% endblock %}
+
+{% set global_header_text = 'Prototype ' %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+        GOV.UK Location picker demo
+      </h1>
+
+      <p>This is a demo of a new location picker typeahead being built by GDS.</p>
+
+      <p>The picker is built to be accessible, usable, and uses register data.</p>
+
+      {# <p>Contribute to the development of the picker.</p>
+
+      <p><a href="#">Blog post on the development of the picker.</a></p> #}
+
+      <div class="form-group">
+        <a class="button button-start" href="country-of-birth" role="button">View demo</a>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

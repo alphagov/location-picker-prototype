@@ -4,13 +4,13 @@
 
 module.exports = {
   // Service name used in header. Eg: 'Renew your passport'
-  serviceName: 'Location Picker Prototypes',
+  serviceName: 'Location picker demo',
 
   // Default port that prototype runs on
   port: '3000',
 
   // Enable or disable password protection on production
-  useAuth: 'true',
+  useAuth: 'false',
 
   // Enable or disable built-in docs and examples.
   useDocumentation: 'true',

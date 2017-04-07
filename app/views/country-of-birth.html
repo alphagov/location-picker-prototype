@@ -1,10 +1,12 @@
 {% extends "layout.html" %}
 
-{% import "../includes/location_picker.html" as locationPicker %}
+{% import "includes/location_picker.html" as locationPicker %}
 
 {% block page_title %}
-  Location Picker Example 5
+  Location picker - public demo
 {% endblock %}
+
+{% set global_header_text = 'Prototype' %}
 
 {% block proposition_header %}
   <!-- blank to remove the proposition header -->
@@ -16,13 +18,13 @@
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      <a class="link-back" href="/country-of-birth/start">Back</a>
+      <a class="link-back" href="/">Back</a>
 
       <h1 class="heading-large">
         What is your country of birth?
       </h1>
 
-      <form class="form" method="POST" action="/country-of-birth/country-of-birth" autocomplete="off">
+      <form class="form" method="POST" action="/country-of-birth" autocomplete="off">
 
         {{ locationPicker.macro('', locale, graph, reverseMap, true) }}
 
