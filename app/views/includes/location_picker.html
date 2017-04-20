@@ -1,7 +1,7 @@
 {% macro macro(label, locale='en-GB', graph={}, reverseMap={}, showPaths=true, autoselect=true, minLength=2) %}
 
 <div class="form-group">
-  <label class="form-label-bold" for="location-select-dropdown">
+  <label class="form-label-bold visually-hidden" for="location-select-dropdown">
     {% if locale === 'en-GB' %}
     {{label}}
     {% else %}
