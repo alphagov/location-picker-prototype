@@ -107,6 +107,30 @@ router.get('/location-picker-7.cy', function (req, res) {
   })
 })
 
+router.get('/location-picker-8', function (req, res) {
+  var locale = 'en-GB'
+
+  res.render('location-picker-8', {
+    html_lang: locale,
+    graph: locationServiceV3.locationGraph,
+    locations: locationServiceV3.canonicalLocationList(locale),
+    reverseMap: locationServiceV3.locationReverseMap(locale),
+    locale: locale
+  })
+})
+
+router.get('/location-picker-8.cy', function (req, res) {
+  var locale = 'cy'
+
+  res.render('location-picker-8', {
+    html_lang: locale,
+    graph: locationServiceV3.locationGraph,
+    locations: locationServiceV3.canonicalLocationList(locale),
+    reverseMap: locationServiceV3.locationReverseMap(locale),
+    locale: locale
+  })
+})
+
 router.get('/demo-picker', function (req, res) {
   var locale = 'en-GB'
 
