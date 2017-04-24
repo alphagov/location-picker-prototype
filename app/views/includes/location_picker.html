@@ -32,8 +32,8 @@
 
   <script src="https://unpkg.com/ua-parser-js@0.7.12"></script>
   <script src="/public/javascripts/bloodhound.js"></script>
-  <script src="https://unpkg.com/accessible-typeahead@0.3.1"></script>
-  <link rel="stylesheet" href="https://unpkg.com/accessible-typeahead@0.3.1/examples/styled.css">
+  <script src="https://unpkg.com/accessible-typeahead@0.4.0"></script>
+  <link rel="stylesheet" href="https://unpkg.com/accessible-typeahead@0.4.0/examples/styled.css">
   <style>
     .typeahead__menu--inline {
       max-height: none;
@@ -111,7 +111,7 @@
           .map(pathNode => presentableName(pathNode.node, pathNode.locale))
           .map(nameInPath => nameInPath.toLowerCase())
           .pop()
-        
+
         const indexOfQuery = indexOfLowerCase(name, query)
 
         const isUk = name === 'United Kingdom'
