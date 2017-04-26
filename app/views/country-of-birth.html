@@ -1,7 +1,5 @@
 {% extends "layout.html" %}
 
-{% import "includes/location_picker.html" as locationPicker %}
-
 {% block page_title %}
   Location picker - public demo
 {% endblock %}
@@ -26,7 +24,21 @@
 
       <form class="form" method="POST" action="/country-of-birth" autocomplete="off">
 
-        {{ locationPicker.macro('What is your country of birth?', locale, graph, reverseMap, true) }}
+        <div class="form-group">
+          <label class="form-label-bold visually-hidden" for="location-select-dropdown">
+            What is your country of birth?
+          </label>
+          <div class="form-control-1-2">
+            <select class="form-control" id="location-select-dropdown">
+              <option value="" disabled selected>
+                Choose a location
+              </option>
+              {% for location in locations %}
+                <option value="{{location}}">{{location}}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
 
         <div class="form-group">
           <input class="button" type="submit" value="Continue">
@@ -43,6 +55,22 @@
 {% endblock %}
 
 {% block body_end %}
-  <!-- Javascript -->
-
+  <link rel="stylesheet" href="https://unpkg.com/accessible-typeahead@0.4.1/dist/styled.min.css">
+  <style>
+    .typeahead__menu--inline {
+      max-height: none;
+      overflow-x: visible;
+    }
+  </style>
+  <script type="text/javascript" src="https://unpkg.com/registers-picker-engine@0.0.2"></script>
+  <script type="text/javascript" src="https://unpkg.com/accessible-typeahead@0.4.1"></script>
+  <script type="text/javascript">
+    var dataFilePath = '/public/data/picker-data-4.json'
+    AccessibleTypeahead.enhanceSelectElement({
+      autoselect: true,
+      selectElement: document.getElementById('location-select-dropdown'),
+      minLength: 2,
+      source: locationPickerSuggestions(dataFilePath)
+    })
+  </script>
 {% endblock %}

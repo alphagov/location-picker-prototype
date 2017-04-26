@@ -9,6 +9,7 @@ var app = express()
 var documentationApp = express()
 var bodyParser = require('body-parser')
 var browserSync = require('browser-sync')
+var compression = require('compression')
 var config = require('./app/config.js')
 var utils = require('./lib/utils.js')
 var packageJson = require('./package.json')
@@ -27,6 +28,8 @@ useAuth = useAuth.toLowerCase()
 useHttps = useHttps.toLowerCase()
 
 var useDocumentation = (config.useDocumentation === 'true')
+
+app.use(compression())
 
 // Promo mode redirects the root to /docs - so our landing page is docs when published on heroku
 var promoMode = process.env.PROMO_MODE || 'false'
