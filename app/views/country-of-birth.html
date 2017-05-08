@@ -68,7 +68,9 @@
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','https://www.google-analytics.com/analytics.js','locationPicker');
 
-    locationPicker('create', 'UA-90200549-4', 'auto');
+    locationPicker('create', 'UA-90200549-4', {
+      'cookieName': '_gaCookieLocationPickerComponent'
+    });
   </script>
   <script type="text/javascript" src="https://unpkg.com/registers-picker-engine@0.0.2"></script>
   <script type="text/javascript" src="https://unpkg.com/accessible-typeahead@0.4.1"></script>
